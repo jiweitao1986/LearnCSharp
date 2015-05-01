@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <class grade="1" number="2">
+    <teachers>
+        <teacher>
+            <tname>刘老师</tname>
+            <tsubject>语文</tsubject>
+        </teacher>
+        <teacher>
+          <tname>陈老师</tname>
+          <tsubject>数学</tsubject>
+        </teacher>
+        <teacher>
+          <tname>陈老师</tname>
+          <tsubject>数学</tsubject>
+        </teacher>
+    </teachers>
+        
+    <students>
+      <student>
+        <name>学生0</name>
+      </student>
+      <student>
+        <name>学生1</name>
+      </student>
+      <student>
+        <name>学生2</name>
+      </student>
+    </students>
+  </class>
