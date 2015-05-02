@@ -12,7 +12,6 @@ using System.Data.SqlClient;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using School;
 using System.Reflection;
 
 namespace LearningCSharp.Basic
