@@ -21,7 +21,7 @@ namespace LearningCSharp.Basic
     {
         static void Main(string[] args)
         {
-            Lambda.LambdaDemo.Run();
+            Types.EnumDemo.Run();
 
             Console.ReadKey();
         }

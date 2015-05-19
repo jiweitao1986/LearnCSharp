@@ -73,6 +73,7 @@
     <Compile Include="Other\DebugDemo.cs" />
     <Compile Include="Other\DelegateDemo.cs" />
     <Compile Include="RegExp\RegExpDemo.cs" />
+    <Compile Include="Types\EnumDemo.cs" />
     <Compile Include="Xml\XmlDemo.cs" />
     <Compile Include="Other\ConvertDemo.cs" />
     <Compile Include="Db\DataSetDemo.cs" />

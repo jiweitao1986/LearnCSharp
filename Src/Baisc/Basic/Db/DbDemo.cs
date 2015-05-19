@@ -72,13 +72,14 @@ namespace LearningCSharp.Basic
  
 
             //利用反射遍历连接对象的所有属性
+            /*
             Type t = sqlCnt.GetType();
             foreach (PropertyInfo pi in t.GetProperties())
             {
                 string name = pi.Name;
                 Console.WriteLine(name);
             }
-            
+            */
             
             Console.ReadLine();
         }
