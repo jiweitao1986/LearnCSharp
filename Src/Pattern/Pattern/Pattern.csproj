@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavioral\TemplateMethod\Beverage\Coffee.cs" />
+    <Compile Include="Behavioral\TemplateMethod\Beverage\Beverage.cs" />
+    <Compile Include="Behavioral\TemplateMethod\Beverage\Tea.cs" />
     <Compile Include="Creational\Singleton\SimpleSingleton\EagerSingleton.cs" />
     <Compile Include="Creational\Singleton\SimpleSingleton\LazySingleton.cs" />
     <Compile Include="Program.cs" />
@@ -50,7 +53,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Behavioral\" />
+    <Folder Include="Behavioral\Strategy\" />
     <Folder Include="Structural\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
