@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavioral\ResponsibilityChain\Price\CEO.cs" />
+    <Compile Include="Behavioral\ResponsibilityChain\Price\Director.cs" />
+    <Compile Include="Behavioral\ResponsibilityChain\Price\Manager.cs" />
+    <Compile Include="Behavioral\ResponsibilityChain\Price\PriceHandler.cs" />
+    <Compile Include="Behavioral\ResponsibilityChain\Price\SaleMan.cs" />
+    <Compile Include="Behavioral\ResponsibilityChain\Price\VicePresident.cs" />
     <Compile Include="Behavioral\TemplateMethod\Beverage\Coffee.cs" />
     <Compile Include="Behavioral\TemplateMethod\Beverage\Beverage.cs" />
     <Compile Include="Behavioral\TemplateMethod\Beverage\Tea.cs" />
