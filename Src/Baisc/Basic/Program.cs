@@ -21,8 +21,7 @@ namespace LearningCSharp.Basic
     {
         static void Main(string[] args)
         {
-            Types.EnumDemo.Run();
-
+            Other.OverrideHideTest.Run();
             Console.ReadKey();
         }
     }

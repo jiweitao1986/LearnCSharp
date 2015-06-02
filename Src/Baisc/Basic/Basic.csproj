@@ -51,9 +51,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="School">
-      <HintPath>..\School\bin\Debug\School.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,10 +65,13 @@
     <Compile Include="Event\EventDemo.cs" />
     <Compile Include="Event\ConnectEventDemo.cs" />
     <Compile Include="Event\TimerEventDemo.cs" />
+    <Compile Include="File\FileTest.cs" />
     <Compile Include="Lambda\LambdaDemo.cs" />
     <Compile Include="Other\ChartDemo.cs" />
     <Compile Include="Other\DebugDemo.cs" />
     <Compile Include="Other\DelegateDemo.cs" />
+    <Compile Include="Other\OverrideHideTest.cs" />
+    <Compile Include="Reflection\ReflectionTest.cs" />
     <Compile Include="RegExp\RegExpDemo.cs" />
     <Compile Include="Types\EnumDemo.cs" />
     <Compile Include="Xml\XmlDemo.cs" />
@@ -80,7 +80,7 @@
     <Compile Include="Other\DateTimeDemo.cs" />
     <Compile Include="Db\DbDemo.cs" />
     <Compile Include="Collection\Dict.cs" />
-    <Compile Include="Json\JsonDemo.cs" />
+    <Compile Include="Json\JsonTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Other\StringDemo.cs" />
@@ -92,9 +92,7 @@
   <ItemGroup>
     <Content Include="Xml\XmlDemo.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reflection\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>

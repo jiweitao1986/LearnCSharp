@@ -8,11 +8,11 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Converters; 
 
-namespace LearningCSharp.Basic
+namespace LearningCSharp.Basic.Json
 {
 
 
-    class JsonDemo
+    class JsonTest
     {
         public static void Run()
         {
