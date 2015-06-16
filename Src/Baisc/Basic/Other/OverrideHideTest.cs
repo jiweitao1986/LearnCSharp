@@ -13,25 +13,25 @@ namespace LearningCSharp.Basic.Other
             MyDerivedClass derivedObj = new MyDerivedClass();
             MyBaseClass baseObj = derivedObj;
 
-            Console.WriteLine("//////////基类：替换基类中虚方法//////////");
+            //Console.WriteLine("//////////基类：替换基类中虚方法//////////");
             baseObj.VirtualOverrideMethod();
 
-            Console.WriteLine("//////////子类：替换基类中虚方法//////////");
-            derivedObj.VirtualOverrideMethod();
+            //Console.WriteLine("//////////子类：替换基类中虚方法//////////");
+            //derivedObj.VirtualOverrideMethod();
 
-            Console.WriteLine("//////////基类：重写基类中虚方法//////////");
-            baseObj.VirtualNewMethod();
+            //Console.WriteLine("//////////基类：重写基类中虚方法//////////");
+            //baseObj.VirtualNewMethod();
 
-            Console.WriteLine("//////////子类：重写基类中虚方法//////////");
-            derivedObj.VirtualNewMethod();
+            //Console.WriteLine("//////////子类：重写基类中虚方法//////////");
+            //derivedObj.VirtualNewMethod();
 
-            Console.WriteLine("//////////基类：隐藏基类中非虚方法//////////");
-            baseObj.NotVirtualNewMethod();
+            //Console.WriteLine("//////////基类：隐藏基类中非虚方法//////////");
+            //baseObj.NotVirtualNewMethod();
 
-            Console.WriteLine("//////////子类：重写基类中虚方法//////////");
-            derivedObj.VirtualNewMethod();
+            //Console.WriteLine("//////////子类：重写基类中虚方法//////////");
+            //derivedObj.VirtualNewMethod();
 
-        
+            //baseObj.InvokeVirtualOverrideMethod();
         }
     }
 
@@ -63,6 +63,16 @@ namespace LearningCSharp.Basic.Other
             Console.WriteLine("I am NotVirtualNewMethod in base class !");
         }
 
+        public void OtherMethod()
+        {
+            Console.WriteLine("I am OtherMethod in base class !");
+        }
+
+        public void InvokeVirtualOverrideMethod()
+        {
+            this.VirtualOverrideMethod();
+        }
+
     }
 
     class MyDerivedClass : MyBaseClass
@@ -73,6 +83,7 @@ namespace LearningCSharp.Basic.Other
         public override void VirtualOverrideMethod()
         {
             base.VirtualOverrideMethod();
+            this.OtherMethod();
             Console.WriteLine("I am VirtualOverrideMethod in derived class !");
         }
 
@@ -94,5 +105,11 @@ namespace LearningCSharp.Basic.Other
             base.NotVirtualNewMethod();
             Console.WriteLine("I am NotVirtualNewMethod in derived class !");
         }
+
+        new public void OtherMethod()
+        {
+            Console.WriteLine("I am OtherMethod in derived class !");
+        }
+    
     }
 }

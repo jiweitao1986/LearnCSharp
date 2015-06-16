@@ -6,17 +6,30 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-
 namespace LearningCSharp.Basic.Reflection
 {
     class ReflectionTest
     {
         public static void Run()
         {
+            AssemblyTest("LearningCSharp.Basic");
+        }
+
+        public static void AssemblyTest(string assemblyString)
+        {
+            Assembly SampleAssembly = Assembly.Load(assemblyString);
+            foreach (Type oType in SampleAssembly.GetTypes())
+            {
+                Console.WriteLine(oType.Name);
+            }
+        }
+
+        public static void TypeTest()
+        {
             Type t = typeof(String);
 
             Console.WriteLine("/////Constructors/////");
-            foreach ( ConstructorInfo cInfo in t.GetConstructors())
+            foreach (ConstructorInfo cInfo in t.GetConstructors())
             {
                 Console.WriteLine("{0}", cInfo.ToString());
             }
@@ -41,7 +54,6 @@ namespace LearningCSharp.Basic.Reflection
             {
                 //Console.WriteLine("{0}", pInfo.Name);
             }
-
         }
     }
 }

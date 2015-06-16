@@ -94,5 +94,17 @@ namespace LearningCSharp.WinForm.Demos
             MessageBox.Show("MosuePosition : " + Control.MousePosition.ToString());
         }
 
+        private void colorEdit1_ColorChanged(object sender, EventArgs e)
+        {
+            // Create an instance of a Color structure.
+            Color myColor = (Color)this.colorEdit1.EditValue;
+
+            // Translate myColor to an HTML color.
+            string htmlColor = ColorTranslator.ToHtml(myColor);
+
+            // Show a message box with the value of htmlColor.
+            MessageBox.Show(htmlColor);
+        }
+
     }
 }

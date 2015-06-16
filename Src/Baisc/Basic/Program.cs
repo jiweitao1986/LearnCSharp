@@ -21,7 +21,8 @@ namespace LearningCSharp.Basic
     {
         static void Main(string[] args)
         {
-            Other.OverrideHideTest.Run();
+            int i = Convert.ToInt16(string.Empty);
+            Console.WriteLine(i.ToString());
             Console.ReadKey();
         }
     }

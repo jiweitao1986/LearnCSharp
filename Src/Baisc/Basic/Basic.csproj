@@ -67,12 +67,14 @@
     <Compile Include="Event\TimerEventDemo.cs" />
     <Compile Include="File\FileTest.cs" />
     <Compile Include="Lambda\LambdaDemo.cs" />
+    <Compile Include="OOP\Constructor\InheritanceTest.cs" />
     <Compile Include="Other\ChartDemo.cs" />
     <Compile Include="Other\DebugDemo.cs" />
     <Compile Include="Other\DelegateDemo.cs" />
     <Compile Include="Other\OverrideHideTest.cs" />
+    <Compile Include="Reflection\ReflectionPerson.cs" />
     <Compile Include="Reflection\ReflectionTest.cs" />
-    <Compile Include="RegExp\RegExpDemo.cs" />
+    <Compile Include="RegExp\RegExpTest.cs" />
     <Compile Include="Types\EnumDemo.cs" />
     <Compile Include="Xml\XmlDemo.cs" />
     <Compile Include="Other\ConvertDemo.cs" />
