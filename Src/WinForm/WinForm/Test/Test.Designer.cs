@@ -43,15 +43,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.secondBtn = new System.Windows.Forms.Button();
             this.LTRFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.fontEdit1 = new DevExpress.XtraEditors.FontEdit();
-            this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
-            this.colorEdit1 = new DevExpress.XtraEditors.ColorEdit();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.LTRFlowLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fontEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colorEdit1.Properties)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -189,52 +192,89 @@
             this.LTRFlowLayout.Controls.Add(this.button1);
             this.LTRFlowLayout.Controls.Add(this.button2);
             this.LTRFlowLayout.Controls.Add(this.firstBtn);
-            this.LTRFlowLayout.Location = new System.Drawing.Point(256, 147);
+            this.LTRFlowLayout.Controls.Add(this.button14);
+            this.LTRFlowLayout.Location = new System.Drawing.Point(559, 175);
             this.LTRFlowLayout.Name = "LTRFlowLayout";
             this.LTRFlowLayout.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LTRFlowLayout.Size = new System.Drawing.Size(483, 458);
             this.LTRFlowLayout.TabIndex = 1;
             // 
-            // fontEdit1
+            // flowLayoutPanel3
             // 
-            this.fontEdit1.Location = new System.Drawing.Point(75, 87);
-            this.fontEdit1.Name = "fontEdit1";
-            this.fontEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.fontEdit1.Size = new System.Drawing.Size(100, 21);
-            this.fontEdit1.TabIndex = 3;
+            this.flowLayoutPanel3.Controls.Add(this.button8);
+            this.flowLayoutPanel3.Controls.Add(this.button12);
+            this.flowLayoutPanel3.Controls.Add(this.button9);
+            this.flowLayoutPanel3.Controls.Add(this.button10);
+            this.flowLayoutPanel3.Controls.Add(this.button13);
+            this.flowLayoutPanel3.Controls.Add(this.button11);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(23, 87);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(330, 133);
+            this.flowLayoutPanel3.TabIndex = 3;
             // 
-            // spinEdit1
+            // button8
             // 
-            this.spinEdit1.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spinEdit1.Location = new System.Drawing.Point(75, 151);
-            this.spinEdit1.Name = "spinEdit1";
-            this.spinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.spinEdit1.Properties.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.spinEdit1.Size = new System.Drawing.Size(100, 21);
-            this.spinEdit1.TabIndex = 4;
+            this.button8.Location = new System.Drawing.Point(3, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // colorEdit1
+            // button9
             // 
-            this.colorEdit1.EditValue = System.Drawing.Color.Empty;
-            this.colorEdit1.Location = new System.Drawing.Point(75, 207);
-            this.colorEdit1.Name = "colorEdit1";
-            this.colorEdit1.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.colorEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.colorEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.colorEdit1.Size = new System.Drawing.Size(100, 21);
-            this.colorEdit1.TabIndex = 5;
-            this.colorEdit1.ColorChanged += new System.EventHandler(this.colorEdit1_ColorChanged);
+            this.button9.Location = new System.Drawing.Point(3, 61);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(84, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 43);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(84, 81);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 3;
+            this.button11.Text = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(3, 32);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(84, 52);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 5;
+            this.button13.Text = "button13";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(278, 50);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 4;
+            this.button14.Text = "button14";
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // Test
             // 
@@ -242,10 +282,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(800, 800);
-            this.ClientSize = new System.Drawing.Size(737, 632);
-            this.Controls.Add(this.colorEdit1);
-            this.Controls.Add(this.spinEdit1);
-            this.Controls.Add(this.fontEdit1);
+            this.ClientSize = new System.Drawing.Size(826, 632);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.LTRFlowLayout);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -257,9 +295,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.LTRFlowLayout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fontEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colorEdit1.Properties)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,9 +316,15 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button secondBtn;
         private System.Windows.Forms.FlowLayoutPanel LTRFlowLayout;
-        private DevExpress.XtraEditors.FontEdit fontEdit1;
-        private DevExpress.XtraEditors.SpinEdit spinEdit1;
-        private DevExpress.XtraEditors.ColorEdit colorEdit1;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button11;
+
 
 
 
