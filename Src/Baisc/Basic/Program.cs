@@ -21,8 +21,7 @@ namespace LearningCSharp.Basic
     {
         static void Main(string[] args)
         {
-            int i = Convert.ToInt16(string.Empty);
-            Console.WriteLine(i.ToString());
+            TmpTest.Run();
             Console.ReadKey();
         }
     }
