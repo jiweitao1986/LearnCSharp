@@ -31,7 +31,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
+    <Reference Include="CustomControl">
+      <HintPath>..\CustomControl\bin\Debug\CustomControl.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -45,38 +49,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Demos\CheckListBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Demos\CheckListBox.Designer.cs">
-      <DependentUpon>CheckListBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Demos\School\StudentCard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Demos\School\StudentCard.Designer.cs">
-      <DependentUpon>StudentCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Demos\School\StudentList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Demos\School\StudentList.Designer.cs">
-      <DependentUpon>StudentList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Demos\Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Demos\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Demos\CheckListBox.resx">
+    <Compile Include="Common\CheckListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\CheckListBox.Designer.cs">
       <DependentUpon>CheckListBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Demos\Test.resx">
+    </Compile>
+    <Compile Include="Container\FlowLayoutPanel\FlowLayoutPanelTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Container\FlowLayoutPanel\FlowLayoutPanelTest.Designer.cs">
+      <DependentUpon>FlowLayoutPanelTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\School\StudentCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demo\School\StudentCard.Designer.cs">
+      <DependentUpon>StudentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\School\StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demo\School\StudentList.Designer.cs">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,11 +91,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Demos\School\StudentCard.resx">
+    <EmbeddedResource Include="Common\CheckListBox.resx">
+      <DependentUpon>CheckListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Container\FlowLayoutPanel\FlowLayoutPanelTest.resx">
+      <DependentUpon>FlowLayoutPanelTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demo\School\StudentCard.resx">
       <DependentUpon>StudentCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demos\School\StudentList.resx">
+    <EmbeddedResource Include="Demo\School\StudentList.resx">
       <DependentUpon>StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,7 +119,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Container\GroupBox\" />
+    <Folder Include="Container\Panel\" />
+    <Folder Include="Container\SplitContainer\" />
+    <Folder Include="Container\TabControl\" />
+    <Folder Include="Container\TableLayoutPanel\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
