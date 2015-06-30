@@ -41,10 +41,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\FirstControl.cs">
+    <Compile Include="Control\FirstControl\FirstControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Control\MyList\MyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MyList\Scope.cs" />
+    <Compile Include="Control\MyList\ScopeConverter.cs" />
+    <Compile Include="Control\MyList\ScopeDropEditor.cs" />
+    <Compile Include="Control\MyList\ScopeDropEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\MyList\ScopeDropEditorControl.Designer.cs">
+      <DependentUpon>ScopeDropEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MyList\ScopeModalEditor.cs" />
+    <Compile Include="Control\MyList\ScopeModalEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\MyList\ScopeModalEditorForm.Designer.cs">
+      <DependentUpon>ScopeModalEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Control\MyList\ScopeDropEditorControl.resx">
+      <DependentUpon>ScopeDropEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MyList\ScopeModalEditorForm.resx">
+      <DependentUpon>ScopeModalEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

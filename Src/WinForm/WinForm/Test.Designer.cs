@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.firstControl1 = new CustomControl.Control.FirstControl();
+            this.myList1 = new CustomControl.Control.MyList.MyList();
             this.SuspendLayout();
             // 
-            // firstControl1
+            // myList1
             // 
-            this.firstControl1.Location = new System.Drawing.Point(85, 100);
-            this.firstControl1.Name = "firstControl1";
-            this.firstControl1.Size = new System.Drawing.Size(75, 23);
-            this.firstControl1.TabIndex = 0;
-            this.firstControl1.Text = "firstControl1";
-            this.firstControl1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.myList1.Location = new System.Drawing.Point(192, 92);
+            this.myList1.Name = "myList1";
+            this.myList1.Scope = null;
+            this.myList1.ScopeDrop = null;
+            this.myList1.ScopeModal = null;
+            this.myList1.Size = new System.Drawing.Size(215, 230);
+            this.myList1.TabIndex = 0;
+            this.myList1.Text = "myList1";
             // 
             // Test
             // 
@@ -46,8 +48,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(800, 800);
-            this.ClientSize = new System.Drawing.Size(524, 471);
-            this.Controls.Add(this.firstControl1);
+            this.ClientSize = new System.Drawing.Size(813, 760);
+            this.Controls.Add(this.myList1);
             this.Name = "Test";
             this.Text = "Test";
             this.Load += new System.EventHandler(this.Test_Load);
@@ -59,7 +61,15 @@
 
         #endregion
 
-        private CustomControl.Control.FirstControl firstControl1;
+        private CustomControl.Control.MyList.MyList myList1;
+
+
+
+
+
+
+
+
 
 
 

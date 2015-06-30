@@ -8,7 +8,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace CustomControl.Control
+namespace CustomControl.Control.FirstControl
 {
     public class FirstControl : System.Windows.Forms.Control
     {
@@ -38,6 +38,14 @@ namespace CustomControl.Control
             }
         }
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            e.Graphics.DrawRectangle(Pens.Black, new Rectangle(
+                Point.Empty, new Size(this.Size.Width - 1, this.Size.Height - 1)
+            ));
+        }
 
 
     }
