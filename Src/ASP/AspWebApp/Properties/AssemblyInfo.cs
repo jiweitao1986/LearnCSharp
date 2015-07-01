@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过下列特性集
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("ASP")]
+[assembly: AssemblyTitle("AspWebApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ASP")]
+[assembly: AssemblyProduct("AspWebApp")]
 [assembly: AssemblyCopyright("版权所有(C) Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("1da68047-a21c-4066-a9f2-8f3477517057")]
+[assembly: Guid("c09ad9a6-8387-4739-808b-0a7359c2ddb5")]
 
 // 程序集的版本信息由下列四个值组成:
 //
