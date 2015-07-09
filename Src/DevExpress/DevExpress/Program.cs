@@ -16,7 +16,8 @@ namespace DevExpress
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TreeList.TreeListTestForm());
+            Application.Run(new DataGrid.DataGridPopContainerTestForm());
+            //Application.Run(new Editors.LookUpEditTestForm());
         }
     }
 }
