@@ -61,6 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collection\ArrayDemo.cs" />
+    <Compile Include="CssParser\BorderParser.cs" />
+    <Compile Include="CssParser\ColorParser.cs" />
+    <Compile Include="CssParser\CssParserTest.cs" />
+    <Compile Include="CssParser\EnumParser.cs" />
+    <Compile Include="CssParser\WidthParser.cs" />
     <Compile Include="Event\Event.cs" />
     <Compile Include="Event\EventDemo.cs" />
     <Compile Include="Event\ConnectEventDemo.cs" />
