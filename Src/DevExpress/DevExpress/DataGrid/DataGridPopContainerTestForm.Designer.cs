@@ -34,37 +34,37 @@
             this.EmpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.nameCol = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.deptCol = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.deptRepositoryItemSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.remarkCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.remarkRepositoryItemPopupContainerEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
             this.remarkPopupContainerControl = new DevExpress.XtraEditors.PopupContainerControl();
             this.remarkRepositoryItemColorEdit = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
+            this.deptRepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.deptRepositoryItemGridLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.empBarManager = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.addBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.delBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.closeBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.deptRepositoryItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.deptCol = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.deptRepositoryItemSearchLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.deptRepositoryItemGridLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemSearchLookUpEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkRepositoryItemPopupContainerEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkPopupContainerControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkRepositoryItemColorEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemLookUpEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemSearchLookUpEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemGridLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empBarManager)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemPopupContainerEdit1
@@ -114,6 +114,30 @@
             this.nameCol.Visible = true;
             this.nameCol.VisibleIndex = 1;
             // 
+            // deptCol
+            // 
+            this.deptCol.Caption = "部门";
+            this.deptCol.ColumnEdit = this.deptRepositoryItemSearchLookUpEdit;
+            this.deptCol.FieldName = "DeptID";
+            this.deptCol.Name = "deptCol";
+            this.deptCol.Visible = true;
+            this.deptCol.VisibleIndex = 2;
+            // 
+            // deptRepositoryItemSearchLookUpEdit
+            // 
+            this.deptRepositoryItemSearchLookUpEdit.AutoHeight = false;
+            this.deptRepositoryItemSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deptRepositoryItemSearchLookUpEdit.Name = "deptRepositoryItemSearchLookUpEdit";
+            this.deptRepositoryItemSearchLookUpEdit.View = this.repositoryItemSearchLookUpEdit1View;
+            // 
+            // repositoryItemSearchLookUpEdit1View
+            // 
+            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
+            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
             // remarkCol
             // 
             this.remarkCol.Caption = "备注";
@@ -148,6 +172,31 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.remarkRepositoryItemColorEdit.Name = "remarkRepositoryItemColorEdit";
             // 
+            // deptRepositoryItemLookUpEdit
+            // 
+            this.deptRepositoryItemLookUpEdit.AutoHeight = false;
+            this.deptRepositoryItemLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deptRepositoryItemLookUpEdit.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "部门ID"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "部门名称")});
+            this.deptRepositoryItemLookUpEdit.Name = "deptRepositoryItemLookUpEdit";
+            // 
+            // deptRepositoryItemGridLookUpEdit
+            // 
+            this.deptRepositoryItemGridLookUpEdit.AutoHeight = false;
+            this.deptRepositoryItemGridLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deptRepositoryItemGridLookUpEdit.Name = "deptRepositoryItemGridLookUpEdit";
+            this.deptRepositoryItemGridLookUpEdit.View = this.repositoryItemGridLookUpEdit1View;
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
             // empBarManager
             // 
             this.empBarManager.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
@@ -158,9 +207,9 @@
             this.empBarManager.DockControls.Add(this.barDockControlRight);
             this.empBarManager.Form = this;
             this.empBarManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3});
+            this.addBarButtonItem,
+            this.delBarButtonItem,
+            this.closeBarButtonItem});
             this.empBarManager.MainMenu = this.bar2;
             this.empBarManager.MaxItemId = 3;
             // 
@@ -171,24 +220,33 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.addBarButtonItem),
+            new DevExpress.XtraBars.LinkPersistInfo(this.delBarButtonItem),
+            new DevExpress.XtraBars.LinkPersistInfo(this.closeBarButtonItem)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
-            // barButtonItem1
+            // addBarButtonItem
             // 
-            this.barButtonItem1.Caption = "新增";
-            this.barButtonItem1.Id = 0;
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.addBarButtonItem.Caption = "新增";
+            this.addBarButtonItem.Id = 0;
+            this.addBarButtonItem.Name = "addBarButtonItem";
+            this.addBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.addBarButtonItem_ItemClick);
             // 
-            // barButtonItem2
+            // delBarButtonItem
             // 
-            this.barButtonItem2.Caption = "删除";
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.delBarButtonItem.Caption = "删除";
+            this.delBarButtonItem.Id = 1;
+            this.delBarButtonItem.Name = "delBarButtonItem";
+            this.delBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.delBarButtonItem_ItemClick);
+            // 
+            // closeBarButtonItem
+            // 
+            this.closeBarButtonItem.Caption = "关闭";
+            this.closeBarButtonItem.Id = 2;
+            this.closeBarButtonItem.Name = "closeBarButtonItem";
+            this.closeBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.closeBarButtonItem_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -218,61 +276,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(532, 24);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 344);
             // 
-            // deptRepositoryItemLookUpEdit
-            // 
-            this.deptRepositoryItemLookUpEdit.AutoHeight = false;
-            this.deptRepositoryItemLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deptRepositoryItemLookUpEdit.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "部门ID"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "部门名称")});
-            this.deptRepositoryItemLookUpEdit.Name = "deptRepositoryItemLookUpEdit";
-            // 
-            // deptCol
-            // 
-            this.deptCol.Caption = "部门";
-            this.deptCol.ColumnEdit = this.deptRepositoryItemSearchLookUpEdit;
-            this.deptCol.FieldName = "DeptID";
-            this.deptCol.Name = "deptCol";
-            this.deptCol.Visible = true;
-            this.deptCol.VisibleIndex = 2;
-            // 
-            // deptRepositoryItemSearchLookUpEdit
-            // 
-            this.deptRepositoryItemSearchLookUpEdit.AutoHeight = false;
-            this.deptRepositoryItemSearchLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deptRepositoryItemSearchLookUpEdit.Name = "deptRepositoryItemSearchLookUpEdit";
-            this.deptRepositoryItemSearchLookUpEdit.View = this.repositoryItemSearchLookUpEdit1View;
-            // 
-            // repositoryItemSearchLookUpEdit1View
-            // 
-            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
-            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // deptRepositoryItemGridLookUpEdit
-            // 
-            this.deptRepositoryItemGridLookUpEdit.AutoHeight = false;
-            this.deptRepositoryItemGridLookUpEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deptRepositoryItemGridLookUpEdit.Name = "deptRepositoryItemGridLookUpEdit";
-            this.deptRepositoryItemGridLookUpEdit.View = this.repositoryItemGridLookUpEdit1View;
-            // 
-            // repositoryItemGridLookUpEdit1View
-            // 
-            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
-            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "关闭";
-            this.barButtonItem3.Id = 2;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
             // DataGridPopContainerTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -290,15 +293,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemSearchLookUpEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkRepositoryItemPopupContainerEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkPopupContainerControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkRepositoryItemColorEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemLookUpEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemSearchLookUpEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemGridLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empBarManager)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,8 +315,8 @@
         private XtraGrid.Columns.GridColumn remarkCol;
         private XtraBars.BarManager empBarManager;
         private XtraBars.Bar bar2;
-        private XtraBars.BarButtonItem barButtonItem1;
-        private XtraBars.BarButtonItem barButtonItem2;
+        private XtraBars.BarButtonItem addBarButtonItem;
+        private XtraBars.BarButtonItem delBarButtonItem;
         private XtraBars.BarDockControl barDockControlTop;
         private XtraBars.BarDockControl barDockControlBottom;
         private XtraBars.BarDockControl barDockControlLeft;
@@ -328,6 +331,6 @@
         private XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
         private XtraEditors.Repository.RepositoryItemGridLookUpEdit deptRepositoryItemGridLookUpEdit;
         private XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
-        private XtraBars.BarButtonItem barButtonItem3;
+        private XtraBars.BarButtonItem closeBarButtonItem;
     }
 }

@@ -98,5 +98,33 @@ namespace DevExpress.DataGrid
             this.remarkPopupContainerControl.Height = remarkEditor.Height;
             this.remarkRepositoryItemPopupContainerEdit.PopupControl.Controls.Add(remarkEditor);
         }
+
+        //新增一行
+        private void addBarButtonItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 删除当前行
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void delBarButtonItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 关闭窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void closeBarButtonItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }
