@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,7 +103,7 @@ namespace DevExpress.DataGrid
         //新增一行
         private void addBarButtonItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e)
         {
-
+            this.empGridView.AddNewRow();
         }
 
         /// <summary>
@@ -112,7 +113,12 @@ namespace DevExpress.DataGrid
         /// <param name="e"></param>
         private void delBarButtonItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e)
         {
-
+            int focusedRowHandle = empGridView.FocusedRowHandle;
+            if (focusedRowHandle < 0)
+            {
+                return;
+            }
+            this.empGridView.DeleteRow(focusedRowHandle);
         }
 
         /// <summary>
@@ -123,6 +129,20 @@ namespace DevExpress.DataGrid
         private void closeBarButtonItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e)
         {
             this.Close();
+        }
+
+        /// <summary>
+        /// 初始化新增行
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void empGridView_InitNewRow(object sender, XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            ColumnView View = sender as ColumnView;
+            View.SetRowCellValue(e.RowHandle, View.Columns["ID"], "新增ID");
+            View.SetRowCellValue(e.RowHandle, View.Columns["Name"], "新增部门");
+            View.SetRowCellValue(e.RowHandle, View.Columns["DeptID"], "gsp");
+            View.SetRowCellValue(e.RowHandle, View.Columns["Remark"], "员工备注");
         }
 
 

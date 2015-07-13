@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
             this.empGridControl = new DevExpress.XtraGrid.GridControl();
-            this.EmpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.empGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.nameCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.deptCol = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,7 +55,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemSearchLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkRepositoryItemPopupContainerEdit)).BeginInit();
@@ -75,7 +75,7 @@
             // 
             this.empGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.empGridControl.Location = new System.Drawing.Point(0, 24);
-            this.empGridControl.MainView = this.EmpGridView;
+            this.empGridControl.MainView = this.empGridView;
             this.empGridControl.Name = "empGridControl";
             this.empGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.remarkRepositoryItemPopupContainerEdit,
@@ -86,17 +86,18 @@
             this.empGridControl.Size = new System.Drawing.Size(532, 344);
             this.empGridControl.TabIndex = 0;
             this.empGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.EmpGridView});
+            this.empGridView});
             // 
-            // EmpGridView
+            // empGridView
             // 
-            this.EmpGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.empGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.idCol,
             this.nameCol,
             this.deptCol,
             this.remarkCol});
-            this.EmpGridView.GridControl = this.empGridControl;
-            this.EmpGridView.Name = "EmpGridView";
+            this.empGridView.GridControl = this.empGridControl;
+            this.empGridView.Name = "empGridView";
+            this.empGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.empGridView_InitNewRow);
             // 
             // idCol
             // 
@@ -292,7 +293,7 @@
             this.Load += new System.EventHandler(this.DataGridPopContainerTestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptRepositoryItemSearchLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkRepositoryItemPopupContainerEdit)).EndInit();
@@ -309,7 +310,7 @@
         #endregion
 
         private XtraGrid.GridControl empGridControl;
-        private XtraGrid.Views.Grid.GridView EmpGridView;
+        private XtraGrid.Views.Grid.GridView empGridView;
         private XtraGrid.Columns.GridColumn idCol;
         private XtraGrid.Columns.GridColumn nameCol;
         private XtraGrid.Columns.GridColumn remarkCol;
