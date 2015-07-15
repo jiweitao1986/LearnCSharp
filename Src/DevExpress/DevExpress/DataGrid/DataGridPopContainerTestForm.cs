@@ -47,15 +47,15 @@ namespace DevExpress.DataGrid
         private DataTable GetEmployees()
         {
             DataTable empDt = new DataTable();
-            DataColumn idDc = new DataColumn("ID", Type.GetType("System.String"));
-            DataColumn nameDc = new DataColumn("Name", Type.GetType("System.String"));
-            DataColumn deptDc = new DataColumn("DeptID", Type.GetType("System.String"));
-            DataColumn remarkDc = new DataColumn("Remark", Type.GetType("System.String"));
+            //DataColumn idDc = new DataColumn("ID", Type.GetType("System.String"));
+            //DataColumn nameDc = new DataColumn("Name", Type.GetType("System.String"));
+            //DataColumn deptDc = new DataColumn("DeptID", Type.GetType("System.String"));
+            //DataColumn remarkDc = new DataColumn("Remark", Type.GetType("System.String"));
 
-            empDt.Columns.Add(idDc);
-            empDt.Columns.Add(nameDc);
-            empDt.Columns.Add(deptDc);
-            empDt.Columns.Add(remarkDc);
+            empDt.Columns.Add(new DataColumn("ID") { Caption = "ID" });
+            empDt.Columns.Add(new DataColumn("Name") { Caption = "Name" });
+            empDt.Columns.Add(new DataColumn("DeptID") { Caption = "DeptID" });
+            empDt.Columns.Add(new DataColumn("Remark") { Caption = "Remark" });
 
             //Rows
             DataRow jiwt = empDt.NewRow();
@@ -64,7 +64,12 @@ namespace DevExpress.DataGrid
             jiwt["DeptID"] = "gsp";
             jiwt["Remark"] = "暂无";
             empDt.Rows.Add(jiwt);
+
+            empDt.Rows.Add("chshj", "陈圣杰", "gsp", "暂无");
+
+            empDt.Rows.Add(new string[] {"chshj", "陈圣杰", "gsp", "暂无"});
             return empDt;
+
         }
 
         /// <summary>
