@@ -86,6 +86,12 @@
             this.colorEdit1.Name = "colorEdit1";
             this.colorEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.colorEdit1.Properties.PopupResizeMode = DevExpress.XtraEditors.Controls.ResizeMode.LiveResize;
+            this.colorEdit1.Properties.ShowCustomColors = false;
+            this.colorEdit1.Properties.ShowPopupShadow = false;
+            this.colorEdit1.Properties.ShowSystemColors = false;
+            this.colorEdit1.Properties.StoreColorAsInteger = true;
+            this.colorEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.colorEdit1.Size = new System.Drawing.Size(164, 21);
             this.colorEdit1.TabIndex = 5;
             // 

@@ -12,6 +12,7 @@ namespace LearningCSharp.Basic
     {
         public static void Run()
         {
+            /*
             string borderString = "-35.11em      #f00   solid ";
 
             string[] borderArray = borderString.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -47,8 +48,10 @@ namespace LearningCSharp.Basic
             Console.WriteLine("width unit:" + borderWidthUnit);
             Console.WriteLine("style:" + borderStyle);
             Console.WriteLine("color:" + borderColor);
+            */
 
-            parseSize("10px");
+            string color = "#0000FF";
+            Console.WriteLine(isHexColor(color));
         }
 
         public static bool isBorderStyle(string borderStyle)
@@ -89,7 +92,7 @@ namespace LearningCSharp.Basic
 
         public static bool isHexColor(string color)
         {
-            color.ToLower();
+            color = color.ToLower();
             string pattern = @"^#([0-9a-f]{3}){1,2}$";
             Regex hexColorRegex = new Regex(pattern);
             return hexColorRegex.IsMatch(color);
