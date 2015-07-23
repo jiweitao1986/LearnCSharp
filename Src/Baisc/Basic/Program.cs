@@ -21,7 +21,7 @@ namespace LearningCSharp.Basic
     {
         static void Main(string[] args)
         {
-            TmpTest.Run();
+            RegExp.RegExpTest.Run();
             Console.ReadKey();
         }
     }

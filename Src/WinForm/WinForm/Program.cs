@@ -17,7 +17,9 @@ namespace LearningCSharp.WinForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new StudentList());
-            Application.Run(new Test.Test());
+            //Application.Run(new Test.Test());
+
+            Application.Run(new Demo.SemanticExpression.ParserForm());
         }
     }
 }
