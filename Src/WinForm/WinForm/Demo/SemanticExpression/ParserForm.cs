@@ -31,29 +31,48 @@ namespace LearningCSharp.WinForm.Demo.SemanticExpression
             string semanticCode = this.semanticEdit.Text;
             string jsCode = string.Empty;
 
+            if (semanticCode.StartsWith("{表达式") == false)
+            {
+                this.jsEdit.Text = "不是语义表达式";
+                return;
+            }
+
             semanticCode = semanticCode.Replace("{表达式", "").Replace("表达式}", "");
             
             //获取英文表达式
             XmlDocument semanticDoc = new XmlDocument();
             semanticDoc.LoadXml(semanticCode);
             XmlElement exprEntityElem = (XmlElement)semanticDoc.GetElementsByTagName("ExprEntity")[0];
-            string enExpr = exprEntityElem.GetAttribute("EnExpr");
+            semanticCode = exprEntityElem.GetAttribute("EnExpr");
 
             //获取
-            if (string.IsNullOrEmpty(enExpr) == false)
+            if (string.IsNullOrEmpty(semanticCode) == false)
             {
-                string fieldPattern = "DefaultFunction.GetDefaultFieldValue\\(\\\"(.*?)\\\"\\)";
-                Regex fieldregex = new Regex(fieldPattern);
+                //移除外侧的function test(){ }test();
+                if (semanticCode.StartsWith("function test(){") == true)
+                {
+                    semanticCode = semanticCode.Substring(16, semanticCode.Length - 24);
+                }
 
-                
-                //Match fieldMatch = fieldregex.Match(enExpr);
-                //if (fieldMatch.Success == true)
-                //{
-                //    jsCode = fieldMatch.Groups[1].Value;
-                //}
+
+                //替换data
+                string fieldPattern = "DefaultFunction.GetDefaultFieldValue\\(\\\"(.*?)\\\"\\)";
+                Regex fieldRegex = new Regex(fieldPattern);
+                semanticCode = fieldRegex.Replace(semanticCode,
+                    "this.getValue(\"{data:$1}\")"
+                );
+
+                //替换SESSION变量
+                string sessionPattern = "DefaultFunction.GetSessionValue\\(\\\"(.*?)\\\"\\)";
+                Regex sessionRegex = new Regex(sessionPattern);
+                semanticCode = sessionRegex.Replace(
+                    semanticCode,
+                    "this.getSession(\"{SESSION~$1}\")"
+                );
+
             }
 
-            this.jsEdit.Text = jsCode;
+            this.jsEdit.Text = semanticCode;
         }
 
         public static string ReplaceTest()
