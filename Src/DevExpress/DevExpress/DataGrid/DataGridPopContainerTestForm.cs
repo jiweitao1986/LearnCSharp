@@ -47,10 +47,6 @@ namespace DevExpress.DataGrid
         private DataTable GetEmployees()
         {
             DataTable empDt = new DataTable();
-            //DataColumn idDc = new DataColumn("ID", Type.GetType("System.String"));
-            //DataColumn nameDc = new DataColumn("Name", Type.GetType("System.String"));
-            //DataColumn deptDc = new DataColumn("DeptID", Type.GetType("System.String"));
-            //DataColumn remarkDc = new DataColumn("Remark", Type.GetType("System.String"));
 
             empDt.Columns.Add(new DataColumn("ID") { Caption = "ID" });
             empDt.Columns.Add(new DataColumn("Name") { Caption = "Name" });
@@ -58,16 +54,16 @@ namespace DevExpress.DataGrid
             empDt.Columns.Add(new DataColumn("Remark") { Caption = "Remark" });
 
             //Rows
-            DataRow jiwt = empDt.NewRow();
-            jiwt["ID"] = "jiwt";
-            jiwt["Name"] = "季维涛";
-            jiwt["DeptID"] = "gsp";
-            jiwt["Remark"] = "暂无";
-            empDt.Rows.Add(jiwt);
+            //DataRow jiwt = empDt.NewRow();
+            //jiwt["ID"] = "jiwt";
+            //jiwt["Name"] = "季维涛";
+            //jiwt["DeptID"] = "gsp";
+            //jiwt["Remark"] = "暂无";
+            //empDt.Rows.Add(jiwt);
 
-            empDt.Rows.Add("chshj", "陈圣杰", "gsp", "暂无");
+            //empDt.Rows.Add("chshj", "陈圣杰", "gsp", "暂无");
 
-            empDt.Rows.Add(new string[] {"chshj", "陈圣杰", "gsp", "暂无"});
+            //empDt.Rows.Add(new string[] {"chshj", "陈圣杰", "gsp", "暂无"});
             return empDt;
 
         }
@@ -84,6 +80,7 @@ namespace DevExpress.DataGrid
             deptDt.Columns.Add(idDc);
             deptDt.Columns.Add(nameDc);
 
+
             //Rows
             DataRow gspDr = deptDt.NewRow();
             gspDr["ID"] = "gsp";
@@ -94,6 +91,7 @@ namespace DevExpress.DataGrid
             crmDr["ID"] = "crm";
             crmDr["Name"] = "CRM产品部";
             deptDt.Rows.Add(crmDr);
+
             return deptDt;
         }
 
@@ -112,15 +110,31 @@ namespace DevExpress.DataGrid
         }
 
         /// <summary>
+        /// 初始化新增行
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void empGridView_InitNewRow(object sender, XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            ColumnView View = sender as ColumnView;
+            View.SetRowCellValue(e.RowHandle, View.Columns["ID"], "新增ID");
+            View.SetRowCellValue(e.RowHandle, View.Columns["Name"], "新增部门");
+            View.SetRowCellValue(e.RowHandle, View.Columns["DeptID"], "gsp");
+            View.SetRowCellValue(e.RowHandle, View.Columns["Remark"], "员工备注");
+        }
+
+        /// <summary>
         /// 删除当前行
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void delBarButtonItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e)
         {
+            
             int focusedRowHandle = empGridView.FocusedRowHandle;
             if (focusedRowHandle < 0)
             {
+                MessageBox.Show("没有选中行！");
                 return;
             }
             this.empGridView.DeleteRow(focusedRowHandle);
@@ -136,19 +150,6 @@ namespace DevExpress.DataGrid
             this.Close();
         }
 
-        /// <summary>
-        /// 初始化新增行
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void empGridView_InitNewRow(object sender, XtraGrid.Views.Grid.InitNewRowEventArgs e)
-        {
-            ColumnView View = sender as ColumnView;
-            View.SetRowCellValue(e.RowHandle, View.Columns["ID"], "新增ID");
-            View.SetRowCellValue(e.RowHandle, View.Columns["Name"], "新增部门");
-            View.SetRowCellValue(e.RowHandle, View.Columns["DeptID"], "gsp");
-            View.SetRowCellValue(e.RowHandle, View.Columns["Remark"], "员工备注");
-        }
 
 
     }

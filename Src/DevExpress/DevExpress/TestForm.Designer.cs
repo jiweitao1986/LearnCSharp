@@ -28,34 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.treeList1 = new DevExpress.XtraTreeList.TreeList();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
+            this.testButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.testButtonEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // treeList1
+            // testButtonEdit
             // 
-            this.treeList1.Location = new System.Drawing.Point(62, 70);
-            this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(400, 200);
-            this.treeList1.TabIndex = 0;
+            this.testButtonEdit.EditValue = "";
+            this.testButtonEdit.Location = new System.Drawing.Point(12, 70);
+            this.testButtonEdit.Name = "testButtonEdit";
+            this.testButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.testButtonEdit.Properties.NullText = "请选择";
+            this.testButtonEdit.Properties.NullValuePrompt = "请选择";
+            this.testButtonEdit.Properties.NullValuePromptShowForEmptyValue = true;
+            this.testButtonEdit.Properties.ReadOnly = true;
+            this.testButtonEdit.Size = new System.Drawing.Size(254, 21);
+            this.testButtonEdit.TabIndex = 0;
+            this.testButtonEdit.ToolTip = "提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容。";
+            this.testButtonEdit.ToolTipTitle = "提示标题";
+            this.testButtonEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.testButtonEdit_ButtonClick);
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 401);
-            this.Controls.Add(this.treeList1);
+            this.Controls.Add(this.testButtonEdit);
             this.Name = "TestForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.TestForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testButtonEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private XtraTreeList.TreeList treeList1;
+        private XtraEditors.ButtonEdit testButtonEdit;
+
+
     }
 }
 

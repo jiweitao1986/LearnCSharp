@@ -16,17 +16,31 @@ namespace LearningCSharp.Basic.Json
     {
         public static void Run()
         {
-            JObject MyJObject = new JObject();
-            MyJObject.Add("1st", 1);
-            MyJObject.Add("2st", "second...");
-            MyJObject.Add("3rd", DateTime.Now);
-            MyJObject.Add("4th", "to be deleted...");
-            MyJObject.Remove("4th");
-            MyJObject["myobj"] = new JObject();
+            //List<Dictionary<string, string>> listBarItemList = new List<Dictionary<string, string>>();
+            //Dictionary<string, string> listbarItemDic = new Dictionary<string, string>
+            //{
+            //    {"id", "idididididid"},
+            //    {"text", "texttexttexttexttext"},
+            //    {"icon", "iconiconiconiconicon"}
+            //};
+            //listBarItemList.Add(listbarItemDic);
+            //string jsonStr = JsonConvert.SerializeObject(listBarItemList);
 
-            Console.WriteLine(MyJObject["myobj"].GetType());
+            ////if (isDisabledBuiltinFuncs == true)
+            ////{
+            ////    Console.WriteLine("It is true !");
+            ////}
 
-            Console.WriteLine(MyJObject.ToString());
+            ////if (isDisabledBuiltinFuncs = false)
+            ////{
+            ////    Console.WriteLine("It is false !");
+            ////}
+            Book b = new Book();
+
+        }
+        static public void Test(string name = "jiweitao")
+        {
+            Console.WriteLine(name);
         }
 
         /// <summary>
@@ -41,6 +55,11 @@ namespace LearningCSharp.Basic.Json
             public override string ToString()
             {
                 return "ID:" + BookID + "; Date:" + PublishDate.ToShortDateString() + "; Price" + Price.ToString("n");
+            }
+
+            public Book(string name="js")
+            {
+                Console.WriteLine(name);
             }
         }
 
@@ -59,9 +78,20 @@ namespace LearningCSharp.Basic.Json
             string jsonBook = "{'BookID':'123', 'PublishDate':'2011-1-2', 'Price':23.5}";
             Dictionary<string, string> bk1 = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonBook);
             Console.WriteLine(bk1["Price"]);
+
+
+            JObject MyJObject = new JObject();
+            MyJObject.Add("1st", 1);
+            MyJObject.Add("2st", "second...");
+            MyJObject.Add("3rd", DateTime.Now);
+            MyJObject.Add("4th", "to be deleted...");
+            MyJObject.Remove("4th");
+            MyJObject["myobj"] = new JObject();
+
+            Console.WriteLine(MyJObject["myobj"].GetType());
+
+            Console.WriteLine(MyJObject.ToString());
         }
-
-
     }
 
 

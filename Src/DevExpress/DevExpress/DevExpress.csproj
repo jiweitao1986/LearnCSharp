@@ -146,6 +146,12 @@
     <Compile Include="Editors\LookUpEditTestForm.Designer.cs">
       <DependentUpon>LookUpEditTestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\ScrollableTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\ScrollableTestForm.Designer.cs">
+      <DependentUpon>ScrollableTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\LookUpEditTestForm.resx">
       <DependentUpon>LookUpEditTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ScrollableTestForm.resx">
+      <DependentUpon>ScrollableTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>

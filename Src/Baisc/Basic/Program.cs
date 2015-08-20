@@ -21,7 +21,7 @@ namespace LearningCSharp.Basic
     {
         static void Main(string[] args)
         {
-            RegExp.RegExpTest.Run();
+            Json.JsonTest.Run();
             Console.ReadKey();
         }
     }

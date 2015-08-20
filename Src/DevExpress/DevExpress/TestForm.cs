@@ -21,8 +21,18 @@ namespace DevExpress
 
         public void TestForm_Load(object sender, EventArgs e)
         {
-            //TreeListNode node = new TreeListNode();
-            treeList1.AppendNode(new object[] { "根节点", 1 }, null);
+        }
+
+        private void testButtonEdit_ButtonClick(object sender, XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Kind == XtraEditors.Controls.ButtonPredefines.Delete)
+            {
+                MessageBox.Show("删除按钮被点击");
+                return;
+            }
+
+            MessageBox.Show("省略号按钮被点击");
+
         }
     }
 }
