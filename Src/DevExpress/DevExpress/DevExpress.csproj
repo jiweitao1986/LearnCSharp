@@ -110,6 +110,12 @@
     <Compile Include="ColorEdit\RepositoryItemColorEditTestForm.Designer.cs">
       <DependentUpon>RepositoryItemColorEditTestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataGrid\DataGridCardTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataGrid\DataGridCardTestForm.Designer.cs">
+      <DependentUpon>DataGridCardTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataGrid\DataGridPopContainerTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="ColorEdit\RepositoryItemColorEditTestForm.resx">
       <DependentUpon>RepositoryItemColorEditTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGrid\DataGridCardTestForm.resx">
+      <DependentUpon>DataGridCardTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataGrid\DataGridPopContainerTestForm.resx">
       <DependentUpon>DataGridPopContainerTestForm.cs</DependentUpon>

@@ -18,7 +18,9 @@ namespace DevExpress
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new DataGrid.DataGridPopContainerTestForm());
             //Application.Run(new Editors.LookUpEditTestForm());
-            Application.Run(new TestForm());
+            //Application.Run(new TestForm());
+
+            Application.Run(new DataGrid.DataGridCardTestForm());
         }
     }
 }
