@@ -1,6 +1,6 @@
-﻿namespace DevExpress.DataGrid
+﻿namespace DevExpress.DataGrid.View
 {
-    partial class DataGridCardTestForm
+    partial class CardViewTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,16 +38,24 @@
             // 
             // empGrid
             // 
-            this.empGrid.Location = new System.Drawing.Point(45, 78);
+            this.empGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.empGrid.Location = new System.Drawing.Point(0, 0);
             this.empGrid.MainView = this.empCardView;
             this.empGrid.Name = "empGrid";
-            this.empGrid.Size = new System.Drawing.Size(602, 383);
+            this.empGrid.Size = new System.Drawing.Size(685, 486);
             this.empGrid.TabIndex = 0;
             this.empGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.empCardView});
             // 
             // empCardView
             // 
+            this.empCardView.Appearance.Card.BackColor = System.Drawing.Color.Red;
+            this.empCardView.Appearance.Card.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.empCardView.Appearance.Card.Options.UseBackColor = true;
+            this.empCardView.Appearance.Card.Options.UseBorderColor = true;
+            this.empCardView.Appearance.CardCaption.BackColor = System.Drawing.Color.Transparent;
+            this.empCardView.Appearance.CardCaption.Options.UseBackColor = true;
+            this.empCardView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.empCardView.CardCaptionFormat = "卡片标题：{1}";
             this.empCardView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.idColumn,
@@ -73,13 +81,13 @@
             this.nameColumn.Visible = true;
             this.nameColumn.VisibleIndex = 1;
             // 
-            // DataGridCardTestForm
+            // CardViewTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 486);
             this.Controls.Add(this.empGrid);
-            this.Name = "DataGridCardTestForm";
+            this.Name = "CardViewTestForm";
             this.Text = "DataGridCardTest";
             this.Load += new System.EventHandler(this.DataGridCardTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empGrid)).EndInit();

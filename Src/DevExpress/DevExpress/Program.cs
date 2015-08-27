@@ -20,7 +20,8 @@ namespace DevExpress
             //Application.Run(new Editors.LookUpEditTestForm());
             //Application.Run(new TestForm());
 
-            Application.Run(new DataGrid.DataGridCardTestForm());
+            //Application.Run(new DataGrid.View.CardViewTestForm());
+            Application.Run(new DataGrid.View.LayoutViewTestForm());
         }
     }
 }

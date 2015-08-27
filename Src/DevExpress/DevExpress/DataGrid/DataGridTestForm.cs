@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DevExpress.DataGrid
+namespace DevExpress.DataGrid.View
 {
     public partial class DataGridTestForm : Form
     {

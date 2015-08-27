@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DataGrid.PopupContainer
+﻿namespace DevExpress.DataGrid.View.PopupContainer
 {
     partial class PlainTextEditor
     {

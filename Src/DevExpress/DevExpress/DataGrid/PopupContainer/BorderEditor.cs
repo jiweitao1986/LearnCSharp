@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace DevExpress.DataGrid.PopupContainer
+namespace DevExpress.DataGrid.View.PopupContainer
 {
     public partial class BorderEditor : XtraUserControl
     {

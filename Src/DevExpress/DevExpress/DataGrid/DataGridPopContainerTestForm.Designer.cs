@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DataGrid
+﻿namespace DevExpress.DataGrid.View
 {
     partial class DataGridPopContainerTestForm
     {
