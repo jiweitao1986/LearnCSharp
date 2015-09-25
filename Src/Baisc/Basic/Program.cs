@@ -14,14 +14,14 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
 
-namespace LearningCSharp.Basic
+namespace LearnCSharp.Basic
 {
 
     class Program
     {
         static void Main(string[] args)
         {
-            Json.JsonTest.Run();
+            Collection.ListTest.Run();
             Console.ReadKey();
         }
     }

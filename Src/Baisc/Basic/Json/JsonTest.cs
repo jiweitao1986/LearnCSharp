@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Converters; 
 
-namespace LearningCSharp.Basic.Json
+namespace LearnCSharp.Basic.Json
 {
 
 

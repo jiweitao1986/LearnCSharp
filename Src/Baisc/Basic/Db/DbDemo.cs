@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 using System.Reflection;
 
-namespace LearningCSharp.Basic
+namespace LearnCSharp.Basic
 {
     class DbDemo
     {

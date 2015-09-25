@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace LearningCSharp.Basic
+namespace LearnCSharp.Basic
 {
     class TmpTest
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Diagnostics;
 
-namespace LearningCSharp.Basic
+namespace LearnCSharp.Basic
 {
     class DebugDemo
     {

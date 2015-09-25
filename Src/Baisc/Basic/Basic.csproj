@@ -7,7 +7,7 @@
     <ProjectGuid>{4B872279-8A8E-4DEC-BB43-0477E971C158}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LearningCSharp.Basic</RootNamespace>
+    <RootNamespace>LearnCSharp.Basic</RootNamespace>
     <AssemblyName>LearningCSharp.Basic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -62,11 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collection\ArrayDemo.cs" />
+    <Compile Include="Collection\ListTest.cs" />
     <Compile Include="CssParser\BorderParser.cs" />
     <Compile Include="CssParser\ColorParser.cs" />
     <Compile Include="CssParser\CssParserTest.cs" />
     <Compile Include="CssParser\EnumParser.cs" />
     <Compile Include="CssParser\WidthParser.cs" />
+    <Compile Include="Data\Employee.cs" />
     <Compile Include="Event\Event.cs" />
     <Compile Include="Event\EventDemo.cs" />
     <Compile Include="Event\ConnectEventDemo.cs" />

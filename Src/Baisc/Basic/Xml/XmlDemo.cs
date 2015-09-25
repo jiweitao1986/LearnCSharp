@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Xml;
 
-namespace LearningCSharp.Basic
+namespace LearnCSharp.Basic
 {
     class XmlDemo
     {

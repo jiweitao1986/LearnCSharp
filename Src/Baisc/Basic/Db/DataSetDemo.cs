@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace LearningCSharp.Basic
+namespace LearnCSharp.Basic
 {
     class DataSetDemo
     {

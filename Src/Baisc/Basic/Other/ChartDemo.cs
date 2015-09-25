@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace LearningCSharp.Basic
+namespace LearnCSharp.Basic
 {
     class ChartDemo
     {

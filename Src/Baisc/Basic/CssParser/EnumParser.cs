@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningCSharp.Basic.CssParser
+namespace LearnCSharp.Basic.CssParser
 {
     class EnumParser
     {
