@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Categories>
+  <Category ID="cat_01" FID="" Name="分类_01" Description="分类_01的描述">
+    <Category ID="cat_01_01" FID="cat_01" Name="分类_01_01" Description="分类_01_01的描述"></Category>
+    <Category ID="cat_01_02" FID="cat_01" Name="分类_01_02" Description="分类_01_02的描述"></Category>
+  </Category>
+  <Category ID="cat_02" FID="" Name="分类_02" Description="分类_02的描述">
+    <Category ID="cat_02_01" FID="cat_02" Name="分类_02_01" Description="分类_02_01的描述"></Category>
+    <Category ID="cat_02_02" FID="cat_02" Name="分类_02_02" Description="分类_02_02的描述"></Category>
+  </Category>
+</Categories>

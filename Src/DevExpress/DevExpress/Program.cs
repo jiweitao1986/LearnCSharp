@@ -16,12 +16,14 @@ namespace DevExpress
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //Application.Run(new DataGrid.View.CardViewTestForm());
+            //Application.Run(new DataGrid.View.LayoutViewTestForm());
             //Application.Run(new DataGrid.DataGridPopContainerTestForm());
             //Application.Run(new Editors.LookUpEditTestForm());
             //Application.Run(new TestForm());
+            Application.Run(new TreeListTest.RecursiveTreeListTestForm());
 
-            //Application.Run(new DataGrid.View.CardViewTestForm());
-            Application.Run(new DataGrid.View.LayoutViewTestForm());
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DevExpress.TreeList
+namespace DevExpress.TreeListTest
 {
     public partial class TreeListTestForm : Form
     {

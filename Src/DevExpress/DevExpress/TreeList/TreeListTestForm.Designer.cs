@@ -1,4 +1,4 @@
-﻿namespace DevExpress.TreeList
+﻿namespace DevExpress.TreeListTest
 {
     partial class TreeListTestForm
     {
