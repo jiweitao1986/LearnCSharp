@@ -21,7 +21,8 @@ namespace LearnCSharp.Basic
     {
         static void Main(string[] args)
         {
-            Collection.ListTest.Run();
+            //Collection.ListTest.Run();
+            TmpTest.Run();
             Console.ReadKey();
         }
     }

@@ -71,6 +71,9 @@ namespace LearnCSharp.Basic
             Console.WriteLine(stDoc.OuterXml);
         }
 
-        
+        public void AppendCDataNode()
+        {
+            
+        }
     }
 }

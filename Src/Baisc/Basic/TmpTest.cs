@@ -5,6 +5,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Collections;
+using System.Xml;
 
 namespace LearnCSharp.Basic
 {
