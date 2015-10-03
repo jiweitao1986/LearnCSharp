@@ -44,9 +44,10 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.CateTreeList = new DevExpress.XtraTreeList.TreeList();
             this.NameCol = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.DescriptionCol = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.catePanel = new DevExpress.XtraEditors.PanelControl();
             this.IDCol = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.DescCol = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.catePanel = new DevExpress.XtraEditors.PanelControl();
+            this.FIDCol = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             ((System.ComponentModel.ISupportInitialize)(this.topBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CateTreeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catePanel)).BeginInit();
@@ -96,57 +97,63 @@
             this.AddBtn.Caption = "添加节点";
             this.AddBtn.Id = 0;
             this.AddBtn.Name = "AddBtn";
+            this.AddBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AddBtn_ItemClick);
             // 
             // AddChildBtn
             // 
             this.AddChildBtn.Caption = "添加子节点";
             this.AddChildBtn.Id = 1;
             this.AddChildBtn.Name = "AddChildBtn";
+            this.AddChildBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AddChildBtn_ItemClick);
             // 
             // DelBtn
             // 
             this.DelBtn.Caption = "删除节点";
             this.DelBtn.Id = 2;
             this.DelBtn.Name = "DelBtn";
+            this.DelBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DelBtn_ItemClick);
             // 
             // ExpandBtn
             // 
-            this.ExpandBtn.Caption = "展开节点";
+            this.ExpandBtn.Caption = "全部展开";
             this.ExpandBtn.Id = 3;
             this.ExpandBtn.Name = "ExpandBtn";
             this.ExpandBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExpandBtn_ItemClick);
             // 
             // CollapseBtn
             // 
-            this.CollapseBtn.Caption = "关闭节点";
+            this.CollapseBtn.Caption = "全部折叠";
             this.CollapseBtn.Id = 4;
             this.CollapseBtn.Name = "CollapseBtn";
+            this.CollapseBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CollapseBtn_ItemClick);
             // 
             // SaveBtn
             // 
             this.SaveBtn.Caption = "保存";
             this.SaveBtn.Id = 5;
             this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.SaveBtn_ItemClick);
             // 
             // CloseBtn
             // 
             this.CloseBtn.Caption = "关闭";
             this.CloseBtn.Id = 6;
             this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CloseBtn_ItemClick);
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 3);
-            this.barDockControlTop.Size = new System.Drawing.Size(624, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(884, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 442);
-            this.barDockControlBottom.Size = new System.Drawing.Size(624, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(884, 0);
             // 
             // barDockControlLeft
             // 
@@ -159,7 +166,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(624, 27);
+            this.barDockControlRight.Location = new System.Drawing.Point(884, 27);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 415);
             // 
             // CateTreeList
@@ -167,20 +174,22 @@
             this.CateTreeList.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.NameCol,
             this.IDCol,
-            this.DescriptionCol});
+            this.FIDCol,
+            this.DescCol});
             this.CateTreeList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CateTreeList.Location = new System.Drawing.Point(0, 3);
             this.CateTreeList.Name = "CateTreeList";
             this.CateTreeList.OptionsBehavior.PopulateServiceColumns = true;
+            this.CateTreeList.OptionsSelection.MultiSelect = true;
             this.CateTreeList.OptionsView.ShowCheckBoxes = true;
-            this.CateTreeList.Size = new System.Drawing.Size(624, 412);
+            this.CateTreeList.Size = new System.Drawing.Size(884, 412);
             this.CateTreeList.TabIndex = 4;
             this.CateTreeList.BeforeCheckNode += new DevExpress.XtraTreeList.CheckNodeEventHandler(this.CateTreeList_BeforeCheckNode);
             this.CateTreeList.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.CateTreeList_AfterCheckNode);
             // 
             // NameCol
             // 
-            this.NameCol.Caption = "名称";
+            this.NameCol.Caption = "分类名称";
             this.NameCol.FieldName = "Name";
             this.NameCol.MinWidth = 32;
             this.NameCol.Name = "NameCol";
@@ -189,15 +198,25 @@
             this.NameCol.VisibleIndex = 0;
             this.NameCol.Width = 300;
             // 
-            // DescriptionCol
+            // IDCol
             // 
-            this.DescriptionCol.Caption = "描述";
-            this.DescriptionCol.FieldName = "Description";
-            this.DescriptionCol.MinWidth = 32;
-            this.DescriptionCol.Name = "DescriptionCol";
-            this.DescriptionCol.Visible = true;
-            this.DescriptionCol.VisibleIndex = 2;
-            this.DescriptionCol.Width = 300;
+            this.IDCol.Caption = "分类ID";
+            this.IDCol.FieldName = "ID";
+            this.IDCol.MinWidth = 32;
+            this.IDCol.Name = "IDCol";
+            this.IDCol.Visible = true;
+            this.IDCol.VisibleIndex = 1;
+            this.IDCol.Width = 150;
+            // 
+            // DescCol
+            // 
+            this.DescCol.Caption = "分类描述";
+            this.DescCol.FieldName = "Desc";
+            this.DescCol.MinWidth = 32;
+            this.DescCol.Name = "DescCol";
+            this.DescCol.Visible = true;
+            this.DescCol.VisibleIndex = 3;
+            this.DescCol.Width = 300;
             // 
             // catePanel
             // 
@@ -207,24 +226,23 @@
             this.catePanel.Location = new System.Drawing.Point(0, 27);
             this.catePanel.Name = "catePanel";
             this.catePanel.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.catePanel.Size = new System.Drawing.Size(624, 415);
+            this.catePanel.Size = new System.Drawing.Size(884, 415);
             this.catePanel.TabIndex = 9;
             // 
-            // IDCol
+            // FIDCol
             // 
-            this.IDCol.Caption = "内码";
-            this.IDCol.FieldName = "ID";
-            this.IDCol.MinWidth = 32;
-            this.IDCol.Name = "IDCol";
-            this.IDCol.Visible = true;
-            this.IDCol.VisibleIndex = 1;
-            this.IDCol.Width = 150;
+            this.FIDCol.Caption = "分类父ID";
+            this.FIDCol.FieldName = "FID";
+            this.FIDCol.Name = "FIDCol";
+            this.FIDCol.Visible = true;
+            this.FIDCol.VisibleIndex = 2;
+            this.FIDCol.Width = 150;
             // 
             // RecursiveTreeListTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 442);
+            this.ClientSize = new System.Drawing.Size(884, 442);
             this.Controls.Add(this.catePanel);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -259,8 +277,9 @@
         private XtraBars.BarButtonItem CloseBtn;
         private XtraTreeList.TreeList CateTreeList;
         private XtraTreeList.Columns.TreeListColumn NameCol;
-        private XtraTreeList.Columns.TreeListColumn DescriptionCol;
+        private XtraTreeList.Columns.TreeListColumn DescCol;
         private XtraEditors.PanelControl catePanel;
         private XtraTreeList.Columns.TreeListColumn IDCol;
+        private XtraTreeList.Columns.TreeListColumn FIDCol;
     }
 }
