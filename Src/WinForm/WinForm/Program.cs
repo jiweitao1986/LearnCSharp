@@ -19,7 +19,7 @@ namespace LearningCSharp.WinForm
             //Application.Run(new StudentList());
             //Application.Run(new Test.Test());
 
-            Application.Run(new Demo.SemanticExpression.ParserForm());
+            Application.Run(new Demo.DesignTime.DesignTimeTestForm());
         }
     }
 }

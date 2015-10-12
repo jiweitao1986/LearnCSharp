@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demo\DesignTime\DesignTimeTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demo\DesignTime\DesignTimeTestForm.Designer.cs">
+      <DependentUpon>DesignTimeTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Demo\SemanticExpression\ParserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,12 +68,6 @@
     </Compile>
     <Compile Include="Common\CheckListBox.Designer.cs">
       <DependentUpon>CheckListBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Container\FlowLayoutPanel\FlowLayoutPanelTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Container\FlowLayoutPanel\FlowLayoutPanelTest.Designer.cs">
-      <DependentUpon>FlowLayoutPanelTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Demo\School\StudentCard.cs">
       <SubType>Form</SubType>
@@ -87,6 +87,9 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Demo\DesignTime\DesignTimeTestForm.resx">
+      <DependentUpon>DesignTimeTestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Demo\SemanticExpression\ParserForm.resx">
       <DependentUpon>ParserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,9 +105,6 @@
     </Compile>
     <EmbeddedResource Include="Common\CheckListBox.resx">
       <DependentUpon>CheckListBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Container\FlowLayoutPanel\FlowLayoutPanelTest.resx">
-      <DependentUpon>FlowLayoutPanelTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Demo\School\StudentCard.resx">
       <DependentUpon>StudentCard.cs</DependentUpon>
@@ -129,6 +129,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Container\FlowLayoutPanel\" />
     <Folder Include="Container\GroupBox\" />
     <Folder Include="Container\Panel\" />
     <Folder Include="Container\SplitContainer\" />
