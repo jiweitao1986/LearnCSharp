@@ -16,6 +16,8 @@ namespace LearningCSharp.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //测试
             //Application.Run(new StudentList());
             //Application.Run(new Test.Test());
 

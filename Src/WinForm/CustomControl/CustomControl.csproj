@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\FirstControl\FirstControl.cs">
+    <Compile Include="Control\MyLabel\MyLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Control\MyList\MyList.cs">

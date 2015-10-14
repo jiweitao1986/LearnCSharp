@@ -13,6 +13,12 @@ namespace LearningCSharp.WinForm.Demo.DesignTime
 {
     public partial class DesignTimeTestForm : Form
     {
+        private DesignSurfaceManager surfaceManager;
+
+        private DesignSurface surface;
+
+        private IDesignerHost host;
+
         public DesignTimeTestForm()
         {
             InitializeComponent();
@@ -25,18 +31,43 @@ namespace LearningCSharp.WinForm.Demo.DesignTime
         /// <param name="e"></param>
         private void DesignTimeTestForm_Load(object sender, EventArgs e)
         {
-            DesignSurfaceManager surfaceManager = new DesignSurfaceManager();
-            DesignSurface surface = surfaceManager.CreateDesignSurface();
-            IDesignerHost host = (IDesignerHost)surface.GetService(typeof(IDesignerHost));
+            //初始化
+            this.surfaceManager = new DesignSurfaceManager();
+            this.surface = surfaceManager.CreateDesignSurface();
+            this.surfaceManager.ActiveDesignSurface = this.surface;
+            this.host = (IDesignerHost)surface.GetService(typeof(IDesignerHost));
 
-            Control view = surface.View as Control;
-            view.BackColor = Color.Gray;
+            //添加到TabPage
+            this.surface.BeginLoad(typeof(TabPage));
+            Control view = this.surface.View as Control;
+            view.BackColor = Color.LightGray;
             view.Dock = DockStyle.Fill;
-
-            
-
             this.designTimePage.Controls.Add(view);
 
+            //this.Refresh();
+
+        }
+
+        /// <summary>
+        /// 创建Label
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void addLabelBtn_Click(object sender, EventArgs e)
+        {
+            this.host.CreateComponent(typeof(Label), "HelloLabel");
+            
+        }
+
+        /// <summary>
+        /// 创建TextBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void addTextBoxBtn_Click(object sender, EventArgs e)
+        {
+            TextBox tb = this.host.CreateComponent(typeof(TextBox), "HelloTextBox") as TextBox;
+            tb.Width = 100;
         }
     }
 }

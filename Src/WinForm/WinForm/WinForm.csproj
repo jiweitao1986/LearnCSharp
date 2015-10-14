@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom\MyLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\MyLabelForm.Designer.cs">
+      <DependentUpon>MyLabelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Demo\DesignTime\DesignTimeTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Custom\MyLabelForm.resx">
+      <DependentUpon>MyLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Demo\DesignTime\DesignTimeTestForm.resx">
       <DependentUpon>DesignTimeTestForm.cs</DependentUpon>
     </EmbeddedResource>
