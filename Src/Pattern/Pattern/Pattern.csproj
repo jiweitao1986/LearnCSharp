@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>C:\Users\ADMINI~1\AppData\Local\Temp\vsAC6C.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>C:\Users\ADMINI~1\AppData\Local\Temp\vsAC6C.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,8 +61,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Behavioral\Command\" />
+    <Folder Include="Behavioral\Interpreter\" />
+    <Folder Include="Behavioral\Iterator\" />
+    <Folder Include="Behavioral\Mediator\" />
+    <Folder Include="Behavioral\Memento\" />
+    <Folder Include="Behavioral\Observer\" />
+    <Folder Include="Behavioral\State\" />
     <Folder Include="Behavioral\Strategy\" />
-    <Folder Include="Structural\" />
+    <Folder Include="Behavioral\Visitor\" />
+    <Folder Include="Creational\AbstractFactory\" />
+    <Folder Include="Creational\Builder\" />
+    <Folder Include="Creational\FactoryMethod\" />
+    <Folder Include="Creational\Prototype\" />
+    <Folder Include="Structural\Adapter\" />
+    <Folder Include="Structural\Bridge\" />
+    <Folder Include="Structural\Composite\" />
+    <Folder Include="Structural\Decorator\" />
+    <Folder Include="Structural\Facade\" />
+    <Folder Include="Structural\Flyweight\" />
+    <Folder Include="Structural\Proxy\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
