@@ -2,3 +2,4 @@
 bin/
 obj/
 v14/
+*.suo
