@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Collections;
 using System.Xml;
+using System.ComponentModel;
+using System.Reflection;
 
 namespace LearnCSharp.Basic
 {
@@ -14,97 +16,39 @@ namespace LearnCSharp.Basic
     {
         public static void Run()
         {
-            /*
-            string borderString = "-35.11em      #f00   solid ";
+            Console.WriteLine("////////////////////GetNames////////////////////");
 
-            string[] borderArray = borderString.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            if (borderArray.Length == 0)
+            string[] names = Enum.GetNames(typeof(ThreeDay));
+            foreach  (string name in names)
             {
-                Console.WriteLine("不是合法的border缩写");
+                Console.WriteLine(name);
+            }
+            Console.WriteLine("////////////////////GetValues////////////////////");
+            var values = Enum.GetValues (typeof(ThreeDay));
+            foreach (int value in values)
+            {
+                Console.WriteLine(value.ToString());
             }
 
-            string borderWidthLen = string.Empty;
-            string borderWidthUnit = string.Empty;
-            string borderStyle = string.Empty;
-            string borderColor = string.Empty;
-
-            foreach (string borderArrayItem in borderArray)
+            Console.WriteLine("////////////////////GetDescriptions////////////////////");
+            Type threeDayType = typeof(ThreeDay);
+            foreach (string name in names)
             {
-                if (isSize(borderArrayItem))
-                {
-                    string[] borderWidthArray = parseSize(borderArrayItem);
-                    borderWidthLen = borderWidthArray[0];
-                    borderWidthUnit = borderWidthArray[1];
-                }
-                else if (isBorderStyle(borderArrayItem))
-                {
-                    borderStyle = borderArrayItem;
-                }
-                else if (isHexColor(borderArrayItem))
-                {
-                    borderColor = borderArrayItem;
-                }
+                FieldInfo fieldInfo = threeDayType.GetField(name);
+                DescriptionAttribute attribute = fieldInfo.GetCustomAttribute(typeof(DescriptionAttribute)) as DescriptionAttribute;
+                Console.WriteLine(attribute.Description);
             }
-
-            Console.WriteLine("width size:" + borderWidthLen);
-            Console.WriteLine("width unit:" + borderWidthUnit);
-            Console.WriteLine("style:" + borderStyle);
-            Console.WriteLine("color:" + borderColor);
-            */
-
-            string color = "#0000FF";
-            Console.WriteLine(isHexColor(color));
+        
         }
+    }
 
-        public static bool isBorderStyle(string borderStyle)
-        {
-            borderStyle.ToLower();
-            string[] borderStyles = new string[]
-            {
-                "none", "hidden", "dotted", "dashed", "solid",
-                "double", "groove", "ridge", "inset", "outset",
-                "initial", "inherit"
-            };
-            return borderStyles.Contains(borderStyle);
-        }
-
-        /// <summary>
-        /// 是否为尺寸
-        /// </summary>
-        /// <param name="size"></param>
-        /// <returns></returns>
-        public static bool isSize(string size)
-        {
-            string pattern = @"^-?\d+(\.\d+)?(px|em|%)$";
-            Regex sizeRegex = new Regex(pattern);
-            return sizeRegex.IsMatch(size);
-        }
-
-        public static string[] parseSize(string size)
-        {
-            Regex reg = new Regex(@"-?\d+(\.\d+)?");
-            Match match = reg.Match(size);
-            return new string[]
-            {
-                match.Value,
-                size.Substring(match.Index + match.Value.Length)
-            };
-            
-        }
-
-        public static bool isHexColor(string color)
-        {
-            color = color.ToLower();
-            string pattern = @"^#([0-9a-f]{3}){1,2}$";
-            Regex hexColorRegex = new Regex(pattern);
-            return hexColorRegex.IsMatch(color);
-        }
-
-        public static Color parseHexColor(string color)
-        {
-            return ColorTranslator.FromHtml(color);
-        }
-
-
+    enum ThreeDay
+    {
+        [Description("昨天")]
+        Yestoday = 1,
+        [Description("今天")]
+        Today = 2,
+        [Description("明天")]
+        Tomorrow = 3
     }
 }
