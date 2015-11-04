@@ -23,6 +23,7 @@ namespace LearnCSharp.Basic
         {
             //Collection.ListTest.Run();
             TmpTest.Run();
+
             Console.ReadKey();
         }
     }

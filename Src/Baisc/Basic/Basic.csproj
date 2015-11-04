@@ -79,6 +79,8 @@
     <Compile Include="Other\ChartDemo.cs" />
     <Compile Include="Other\DebugDemo.cs" />
     <Compile Include="Other\DelegateDemo.cs" />
+    <Compile Include="Other\ExtendMethod\PersonExtensionTest.cs" />
+    <Compile Include="Other\ExtendMethod\StringExtensionTest.cs" />
     <Compile Include="Other\OverrideHideTest.cs" />
     <Compile Include="Reflection\ReflectionPerson.cs" />
     <Compile Include="Reflection\ReflectionTest.cs" />
@@ -103,7 +105,9 @@
   <ItemGroup>
     <Content Include="Xml\XmlDemo.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Other\Attribute\" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
