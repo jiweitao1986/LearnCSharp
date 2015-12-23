@@ -2,22 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Drawing;
-using System.Collections;
-using System.Xml;
 
-
-namespace LearnCSharp.Basic
+namespace LearnCSharp.Basic.Types
 {
-    class TmpTest
+    class TypeTest
     {
+
         public static void Run()
         {
-        
+            
         }
     }
-
-
 }

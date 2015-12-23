@@ -22,7 +22,7 @@ namespace LearnCSharp.Basic
         static void Main(string[] args)
         {
             //Collection.ListTest.Run();
-            TmpTest.Run();
+            Types.EnumTest.Run();
 
             Console.ReadKey();
         }

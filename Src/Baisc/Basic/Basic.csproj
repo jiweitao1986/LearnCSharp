@@ -86,7 +86,8 @@
     <Compile Include="Reflection\ReflectionTest.cs" />
     <Compile Include="RegExp\RegExpTest.cs" />
     <Compile Include="TmpTest.cs" />
-    <Compile Include="Types\EnumDemo.cs" />
+    <Compile Include="Types\EnumTest.cs" />
+    <Compile Include="Types\TypeTest.cs" />
     <Compile Include="Xml\XmlDemo.cs" />
     <Compile Include="Other\ConvertDemo.cs" />
     <Compile Include="Db\DataSetDemo.cs" />
