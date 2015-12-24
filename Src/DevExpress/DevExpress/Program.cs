@@ -22,7 +22,9 @@ namespace DevExpress
             //Application.Run(new DataGrid.DataGridPopContainerTestForm());
             //Application.Run(new Editors.LookUpEditTestForm());
             //Application.Run(new TestForm());
-            Application.Run(new TreeListTest.RecursiveTreeListTestForm());
+            //Application.Run(new TreeListTest.RecursiveTreeListTestForm());
+
+            Application.Run(new TreeListTest.PropertyTreeListTestForm());
 
         }
     }
