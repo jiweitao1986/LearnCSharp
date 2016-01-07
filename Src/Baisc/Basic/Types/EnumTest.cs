@@ -114,8 +114,8 @@ namespace LearnCSharp.Basic.Types
             foreach (string name in names)
             {
                 FieldInfo fieldInfo = threeDayType.GetField(name);
-                DescriptionAttribute attribute = fieldInfo.GetCustomAttribute(typeof(DescriptionAttribute)) as DescriptionAttribute;
-                Console.WriteLine(attribute.Description);
+                //DescriptionAttribute attribute = fieldInfo.GetCustomAttribute(typeof(DescriptionAttribute)) as DescriptionAttribute;
+                //Console.WriteLine(attribute.Description);
             }
             Console.WriteLine("");
 
