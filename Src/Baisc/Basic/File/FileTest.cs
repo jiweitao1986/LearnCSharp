@@ -19,11 +19,25 @@ namespace LearnCSharp.Basic.File
             sw.Close();
              */
 
-            Person p1 = new Person("张三");
-            Console.WriteLine(p1.GetType());
+            //Person p1 = new Person("张三");
+            //Console.WriteLine(p1.GetType());
+            ReadAllTextTest();
+
+        }
+
+        public static void ReadAllTextTest()
+        {
+            //string path = @"E:\Var\C#\LearnCSharp\Src\Baisc\Basic\Xml\XmlDemo.xml";
+            string path = @"../../Xml/XmlDemo.xml";
+            string str = System.IO.File.ReadAllText(path);
+
+            Console.Write(str);
         }
 
     }
+
+
+
 
 
     public class Person
