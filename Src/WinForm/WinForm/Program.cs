@@ -21,7 +21,7 @@ namespace LearningCSharp.WinForm
             //Application.Run(new StudentList());
             //Application.Run(new Test.Test());
 
-            Application.Run(new Demo.DesignTime.DesignTimeTestForm());
+            Application.Run(new Other.PropertyGridTest.SimplePropertyGridTestForm());
         }
     }
 }

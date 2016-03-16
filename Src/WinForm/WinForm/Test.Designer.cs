@@ -28,19 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.myList1 = new CustomControl.Control.MyList.MyList();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.SuspendLayout();
             // 
-            // myList1
+            // propertyGrid1
             // 
-            this.myList1.Location = new System.Drawing.Point(192, 92);
-            this.myList1.Name = "myList1";
-            this.myList1.Scope = null;
-            this.myList1.ScopeDrop = null;
-            this.myList1.ScopeModal = null;
-            this.myList1.Size = new System.Drawing.Size(215, 230);
-            this.myList1.TabIndex = 0;
-            this.myList1.Text = "myList1";
+            this.propertyGrid1.Location = new System.Drawing.Point(525, 84);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(219, 450);
+            this.propertyGrid1.TabIndex = 1;
             // 
             // Test
             // 
@@ -49,7 +45,7 @@
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(800, 800);
             this.ClientSize = new System.Drawing.Size(813, 760);
-            this.Controls.Add(this.myList1);
+            this.Controls.Add(this.propertyGrid1);
             this.Name = "Test";
             this.Text = "Test";
             this.Load += new System.EventHandler(this.Test_Load);
@@ -61,7 +57,8 @@
 
         #endregion
 
-        private CustomControl.Control.MyList.MyList myList1;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
+
 
 
 
