@@ -67,11 +67,23 @@
     <Compile Include="Demo\SemanticExpression\ParserForm.Designer.cs">
       <DependentUpon>ParserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Other\PropertyGridTest\Person.cs" />
-    <Compile Include="Other\PropertyGridTest\SimplePropertyGridTestForm.cs">
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\BagPropertyDescriptor.cs" />
+    <Compile Include="Other\PropertyGridTest\CustomTypeDescriptor.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\DataBindingBag.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBagTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Other\PropertyGridTest\SimplePropertyGridTestForm.Designer.cs">
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBagTestForm.Designer.cs">
+      <DependentUpon>PropertyBagTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\PropertyGridTest\SimpleTest\Person.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\BagPropertyDescriptorCollection.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\MyControlBag.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBag.cs" />
+    <Compile Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.Designer.cs">
       <DependentUpon>SimplePropertyGridTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -109,7 +121,10 @@
     <EmbeddedResource Include="Demo\SemanticExpression\ParserForm.resx">
       <DependentUpon>ParserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Other\PropertyGridTest\SimplePropertyGridTestForm.resx">
+    <EmbeddedResource Include="Other\PropertyGridTest\PropertyBagTest\PropertyBagTestForm.resx">
+      <DependentUpon>PropertyBagTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.resx">
       <DependentUpon>SimplePropertyGridTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -154,6 +169,7 @@
     <Folder Include="Container\SplitContainer\" />
     <Folder Include="Container\TabControl\" />
     <Folder Include="Container\TableLayoutPanel\" />
+    <Folder Include="Other\PropertyGridTest\OtherTest\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
