@@ -67,9 +67,12 @@
     <Compile Include="Demo\SemanticExpression\ParserForm.Designer.cs">
       <DependentUpon>ParserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Other\PropertyGridTest\PropertyBagTest\BagPropertyDescriptor.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\Editors\DataBindingEditor.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\BagPropertyDescriptor.cs" />
     <Compile Include="Other\PropertyGridTest\CustomTypeDescriptor.cs" />
-    <Compile Include="Other\PropertyGridTest\PropertyBagTest\DataBindingBag.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\Converters\DataBindingConverter.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\DataBindingBag.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\SourceTypeAttribute.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBagTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,9 +80,9 @@
       <DependentUpon>PropertyBagTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Other\PropertyGridTest\SimpleTest\Person.cs" />
-    <Compile Include="Other\PropertyGridTest\PropertyBagTest\BagPropertyDescriptorCollection.cs" />
-    <Compile Include="Other\PropertyGridTest\PropertyBagTest\MyControlBag.cs" />
-    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBag.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\BagPropertyDescriptorCollection.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\MyControlBag.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\PropertyBag.cs" />
     <Compile Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.cs">
       <SubType>Form</SubType>
     </Compile>

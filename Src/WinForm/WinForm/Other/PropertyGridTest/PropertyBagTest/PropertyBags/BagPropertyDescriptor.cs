@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
+namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.PropertyBags
 {
     public class BagPropertyDescriptor : PropertyDescriptor
     {
@@ -104,7 +104,6 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
         #endregion
 
 
-
         #region 字段
 
         public override string Name
@@ -156,57 +155,70 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
 
         public void SetBrowsable(bool value)
         {
-            _isBrowsable = value;
+            this._isBrowsable = value;
         }
 
         public void SetReadOnly(bool value)
         {
-            _isReadOnly = value;
+            this._isReadOnly = value;
         }
 
+
+        /// <summary>
+        /// 获取属性值
+        /// 调用所在属性包的“获取属性值”方法
+        /// </summary>
+        /// <param name="component"></param>
+        /// <returns></returns>
         public override object GetValue(object component)
         {
-            //if (_component == null)
-            //{
-            //    return _propertyBag.InternelGetValue(component, Name);
-            //}
-            //else
-            //{
-            //    return _propertyBag.InternelGetValue(_component, Name);
-            //}
-            return null;
+            if (this._component == null)
+            {
+                //对参数传递过来的component进行赋值
+                return this._propertyBag.InternelGetValue(component, Name);
+            }
+            else
+            {
+                return this._propertyBag.InternelGetValue(this._component, Name);
+            }
         }
 
+
+        /// <summary>
+        /// 给属性复制
+        /// </summary>
+        /// <param name="component"></param>
+        /// <param name="value"></param>
         public override void SetValue(object component, object value)
         {
-            //// 值是属性封装包时，检测是否是嵌套包的类型，是不处理赋值
-            //if ((_converter != null) && (value is PropertyBag) &&
-            //    (_propertyBag.NestedBagTypes.Contains(value.GetType())))
-            //{
-            //    return;
-            //}
+            // 值是属性封装包时，检测是否是嵌套包的类型，是不处理赋值
+            if ((_converter != null) && (value is PropertyBag) &&
+                (_propertyBag.NestedBagTypes.Contains(value.GetType())))
+            {
+                return;
+            }
 
 
-            //PropertyChangedEventArgs e = new PropertyChangedEventArgs(Name);
-            //bool cancel = false;
-            //if (_component == null)
-            //{
-            //    _propertyBag.OnPropertyChanging(component, Name, value, ref cancel);
-            //    if (!cancel)
-            //    {
-            //        _propertyBag.InternelSetValue(component, Name, value);
-            //        _propertyBag.OnPropertyChanged(component, Name, value);
-            //    }
-            //}
-            //else
-            //{
-            //    _propertyBag.OnPropertyChanging(_component, Name, value, ref cancel);
-            //    if (!cancel)
-            //    {
-            //        _propertyBag.InternelSetValue(_component, Name, value);
-            //        _propertyBag.OnPropertyChanged(_component, Name, value);
-            //    }
-            //}
+            PropertyChangedEventArgs e = new PropertyChangedEventArgs(Name);
+            bool cancel = false;
+            if (_component == null)
+            {
+                _propertyBag.OnPropertyChanging(component, Name, value, ref cancel);
+                if (!cancel)
+                {
+                    _propertyBag.InternelSetValue(component, Name, value);
+                    _propertyBag.OnPropertyChanged(component, Name, value);
+                }
+            }
+            else
+            {
+                _propertyBag.OnPropertyChanging(_component, Name, value, ref cancel);
+                if (!cancel)
+                {
+                    _propertyBag.InternelSetValue(_component, Name, value);
+                    _propertyBag.OnPropertyChanged(_component, Name, value);
+                }
+            }
         }
 
         public override bool CanResetValue(object component)

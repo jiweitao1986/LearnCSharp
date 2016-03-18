@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
+namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.PropertyBags
 {
+    [SourceType(typeof(DataBinding))]
     public class DataBindingBag : PropertyBag
     {
         public DataBindingBag(DataBinding dataBinding) : base(dataBinding)
@@ -19,8 +20,6 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
                 typeof(string), dataBinding, null, null, null);
 
         }
-
-        
     }
 
 
@@ -31,7 +30,6 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
         public string InstanceId { get; set; }
 
         public string TableName { get; set; }
-
 
         public string FieldName { get; set; }
 

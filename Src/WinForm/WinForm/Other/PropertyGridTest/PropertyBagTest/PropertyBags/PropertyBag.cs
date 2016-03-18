@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
+namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.PropertyBags
 {
+    public delegate void PropertyChangingHandler(object sender, string name, object value, ref bool cancel);
+    public delegate void PropertyChangedHandler(object sender, string name, object value);
+
     /// <summary>
     /// 属性包
     /// </summary>
@@ -26,6 +30,14 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
         /// <param name="_properties"></param>
         private BagPropertyDescriptorCollection _properties;
 
+        List<Type> _bagTypes = null;
+
+        List<PropertyBag> _bags = null;
+
+        internal PropertyBag _parentBag = null;
+
+        internal string _parentPropertyName = null;
+
         #endregion
 
 
@@ -35,6 +47,9 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
         {
             this._source = source;
             this._properties = new BagPropertyDescriptorCollection();
+
+            this._bagTypes = new List<Type>();
+            this._bags = new List<PropertyBag>();
         }
 
         #endregion
@@ -77,6 +92,33 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
                 return _source;
             }
         }
+
+
+        /// <summary>
+        /// 获取嵌套的封装包类型的集合。
+        /// 如果封装的对象内的某个属性也需要封装，
+        /// 请将能封装该类型的属性包的类型添加到这个集合
+        /// </summary>
+        public List<Type> NestedBagTypes
+        {
+            get
+            {
+                return _bagTypes;
+            }
+        }
+
+        /// <summary>
+        /// 嵌套的封装包的集合。
+        /// 经过封装的嵌套包会添加到这个集合中
+        /// </summary>
+        public List<PropertyBag> NestedBags
+        {
+            get
+            {
+                return _bags;
+            }
+        }
+
 
         #endregion
 
@@ -273,6 +315,198 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
 
         #endregion
 
+
+        #region 设置属性值、获取属性值
+
+        /// <summary>
+        /// 设置属性值
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="propertyName"></param>
+        /// <param name="value"></param>
+        protected virtual void SetValue(object source, string propertyName, object value)
+        {
+            PropertyInfo pi = source.GetType().GetProperty(propertyName);
+            if (pi.CanWrite)
+            {
+                pi.SetValue(source, value, null);
+            }
+        }
+
+        /// <summary>
+        /// 内部设置属性值
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="propertyName"></param>
+        /// <param name="value"></param>
+        internal void InternelSetValue(object source, string propertyName, object value)
+        {
+            this.SetValue(source, propertyName, value);
+        }
+
+        protected virtual object GetValue(object source, string propertyName)
+        {
+            object obj = null;
+            PropertyInfo pi = source.GetType().GetProperty(propertyName);
+            if (pi != null && pi.CanRead)
+            {
+                try
+                {
+                    obj = pi.GetValue(source, null);
+                }
+                catch
+                {
+                    
+                }
+
+                if (obj != null)
+                {
+                    Type t = NestedType(obj);
+                    if (t != null)
+                    {
+                        return NestedBag(obj, t, propertyName);
+                    }
+                }
+            }
+            return obj;
+        }
+
+        internal object InternelGetValue(object source, string propertyName)
+        {
+            object obj = GetValue(source, propertyName);
+            if (obj != null)
+            {
+                Type t = NestedType(obj);
+                if (t != null)
+                {
+                    return NestedBag(obj, t, propertyName);
+                }
+            }
+            return obj;
+        }
+
+
+
+        // 判断是否当前对象是否在嵌套的类型包的支持列表中
+        private Type NestedType(object obj)
+        {
+            foreach (Type t in this.NestedBagTypes)
+            {
+                object[] objects = t.GetCustomAttributes(typeof(SourceTypeAttribute), false);
+                if (objects != null && objects.Length > 0)
+                {
+                    SourceTypeAttribute st = objects[0] as SourceTypeAttribute;
+                    if (st.SourceType == obj.GetType())
+                    {
+                        return t;
+                    }
+                }
+            }
+            return null;
+        }
+
+        // 获取嵌套类型的属性封装包
+        private PropertyBag NestedBag(object obj, Type bagType, string propertyName)
+        {
+            foreach (PropertyBag bag in this.NestedBags)
+            {
+                if (bag.SourceObject == obj)
+                {
+                    return bag;
+                }
+            }
+            PropertyBag b = bagType.Assembly.CreateInstance(bagType.FullName, false, BindingFlags.Public | BindingFlags.Instance, null, new object[] { obj }, null, null) as PropertyBag;
+            b._parentBag = this;
+            b._parentPropertyName = propertyName;
+            this.NestedBags.Add(b);
+            return b;
+        }
+
+
+        /// <summary>
+        /// 获取属性类型
+        /// </summary>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        private Type GetPropertyType(string propertyName)
+        {
+
+            PropertyInfo pi = SourceObject.GetType().GetProperty(propertyName);
+            if (pi != null)
+            {
+                return pi.PropertyType;
+            }
+
+            return typeof (object);
+        }
+
+
+        #endregion
+
+
+        #region 事件相关
+
+        PropertyChangedHandler _changed;
+        PropertyChangingHandler _changing;
+
+        /// <summary>
+        /// 更改属性值时。
+        /// 可以在这里实现输入有效值的判断。
+        /// </summary>
+        public event PropertyChangingHandler PropertyChanging
+        {
+            add
+            {
+                _changing += value;
+            }
+            remove
+            {
+                _changing -= value;
+            }
+        }
+
+        /// <summary>
+        /// 更改属性值后
+        /// </summary>
+        public event PropertyChangedHandler PropertyChanged
+        {
+            add
+            {
+                _changed += value;
+            }
+            remove
+            {
+                _changed -= value;
+            }
+        }
+
+
+        internal void OnPropertyChanged(object sender, string name, object value)
+        {
+            if (_changed != null)
+            {
+                _changed(sender, name, value);
+            }
+            if (_parentBag != null)
+            {
+                _parentBag.OnPropertyChanged(_parentBag.SourceObject, _parentPropertyName, SourceObject);
+                _parentBag.OnPropertyChanged(_parentBag.SourceObject, _parentPropertyName + "." + name, value);
+            }
+        }
+
+        internal void OnPropertyChanging(object sender, string name, object value, ref bool cancel)
+        {
+            if (_changing != null)
+            {
+                _changing(sender, name, value, ref cancel);
+            }
+            if (_parentBag != null && (!cancel))
+            {
+                _parentBag.OnPropertyChanging(_parentBag.SourceObject, _parentPropertyName, SourceObject, ref cancel);
+            }
+        }
+
+        #endregion
 
     }
 

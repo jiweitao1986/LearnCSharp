@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest
+namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.PropertyBags
 {
     /// <summary>
     /// 属性包属性描述集合
