@@ -4,10 +4,15 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LearningCSharp.WinForm.Lib;
 
 namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.PropertyBags
 {
-    public class BagPropertyDescriptor : PropertyDescriptor
+
+    /// <summary>
+    /// 属性包属性描述定义
+    /// </summary>
+    public class CustomPropertyDescriptor : PropertyDescriptor
     {
         #region 字段
 
@@ -44,7 +49,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <param name="converter">转换器</param>
         /// <param name="attributes">该属性的特性集合</param>
         /// <param name="propertyBag">所在的属性封装包</param>
-        public BagPropertyDescriptor(
+        public CustomPropertyDescriptor(
             string name, string displayName, string discription,
             string category, bool isReadOnly, bool isBrowsable,
             Type propertyType, Type componentType, TypeConverter converter, Type editorType,
@@ -79,7 +84,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <param name="converter">转换器</param>
         /// <param name="attributes">该属性的特性集合</param>
         /// <param name="propertyBag">所在的属性封装包</param>
-        public BagPropertyDescriptor(
+        public CustomPropertyDescriptor(
             string name, string displayName, string discription,
             string category, bool isReadOnly, bool isBrowsable,
             Type propertyType, object component, TypeConverter converter, Type editorType,
@@ -153,6 +158,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
 
         #endregion
 
+
         public void SetBrowsable(bool value)
         {
             this._isBrowsable = value;
@@ -172,6 +178,8 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public override object GetValue(object component)
         {
+            LogWriter.WriteLog("CustomPropertyDescriptor -- GetValue");
+
             if (this._component == null)
             {
                 //对参数传递过来的component进行赋值
@@ -191,13 +199,14 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <param name="value"></param>
         public override void SetValue(object component, object value)
         {
+            LogWriter.WriteLog("CustomPropertyDescriptor -- SetValue");
+
             // 值是属性封装包时，检测是否是嵌套包的类型，是不处理赋值
             if ((_converter != null) && (value is PropertyBag) &&
                 (_propertyBag.NestedBagTypes.Contains(value.GetType())))
             {
                 return;
             }
-
 
             PropertyChangedEventArgs e = new PropertyChangedEventArgs(Name);
             bool cancel = false;
@@ -234,5 +243,35 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         {
             return false;
         }
+
+
+        private object _lastEditor = null;
+
+        public override object GetEditor(Type editorBaseType)
+        {
+            if (_isReadOnly) return null;
+
+            if (_lastEditor != null)
+            {
+                return _lastEditor;
+            }
+
+            object obj = null;
+
+            if (_eidtorType != null)
+            {
+                _lastEditor = obj = _eidtorType.Assembly.CreateInstance(_eidtorType.FullName);
+            }
+
+            if (obj == null) obj = base.GetEditor(editorBaseType);
+
+            return obj;
+        }
+
+        protected override void OnValueChanged(object component, EventArgs e)
+        {
+            base.OnValueChanged(component, e);
+        }
+
     }
 }

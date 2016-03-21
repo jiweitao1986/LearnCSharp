@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Custom\MyLabelForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Custom\MyLabelForm.Designer.cs">
-      <DependentUpon>MyLabelForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Demo\DesignTime\DesignTimeTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +61,9 @@
     <Compile Include="Demo\SemanticExpression\ParserForm.Designer.cs">
       <DependentUpon>ParserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lib\LogWriter.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\Editors\DataBindingEditor.cs" />
-    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\BagPropertyDescriptor.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\CustomPropertyDescriptor.cs" />
     <Compile Include="Other\PropertyGridTest\CustomTypeDescriptor.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\Converters\DataBindingConverter.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\DataBindingBag.cs" />
@@ -80,7 +75,7 @@
       <DependentUpon>PropertyBagTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Other\PropertyGridTest\SimpleTest\Person.cs" />
-    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\BagPropertyDescriptorCollection.cs" />
+    <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\CustomPropertyDescriptorCollection.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\MyControlBag.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\PropertyBag.cs" />
     <Compile Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.cs">
@@ -115,9 +110,6 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Custom\MyLabelForm.resx">
-      <DependentUpon>MyLabelForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Demo\DesignTime\DesignTimeTestForm.resx">
       <DependentUpon>DesignTimeTestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +164,7 @@
     <Folder Include="Container\SplitContainer\" />
     <Folder Include="Container\TabControl\" />
     <Folder Include="Container\TableLayoutPanel\" />
+    <Folder Include="Custom\" />
     <Folder Include="Other\PropertyGridTest\OtherTest\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningCSharp.WinForm.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,8 +9,28 @@ using System.Threading.Tasks;
 
 namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.PropertyBags
 {
+
+    #region 委托声明
+
+    /// <summary>
+    /// 属性值变化前处理委托声明
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="name"></param>
+    /// <param name="value"></param>
+    /// <param name="cancel"></param>
     public delegate void PropertyChangingHandler(object sender, string name, object value, ref bool cancel);
+
+    /// <summary>
+    /// 属性值变化后处理委托声明
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="name"></param>
+    /// <param name="value"></param>
     public delegate void PropertyChangedHandler(object sender, string name, object value);
+
+    #endregion
+
 
     /// <summary>
     /// 属性包
@@ -23,19 +44,30 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// </summary>
         private object _source = null;
 
-
         /// <summary>
         /// 属性集合
         /// </summary>
         /// <param name="_properties"></param>
-        private BagPropertyDescriptorCollection _properties;
+        private CustomPropertyDescriptorCollection _properties;
 
+        /// <summary>
+        /// 嵌套属性包类型集合
+        /// </summary>
         List<Type> _bagTypes = null;
 
+        /// <summary>
+        /// 嵌套属性包集合
+        /// </summary>
         List<PropertyBag> _bags = null;
 
+        /// <summary>
+        /// 父属性包集合
+        /// </summary>
         internal PropertyBag _parentBag = null;
 
+        /// <summary>
+        /// 父属性名称
+        /// </summary>
         internal string _parentPropertyName = null;
 
         #endregion
@@ -43,27 +75,35 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
 
         #region 构造函数
 
-        public PropertyBag(object source)
+        public PropertyBag()
         {
-            this._source = source;
-            this._properties = new BagPropertyDescriptorCollection();
-
+            this._properties = new CustomPropertyDescriptorCollection();
             this._bagTypes = new List<Type>();
             this._bags = new List<PropertyBag>();
         }
 
+        /// <summary>
+        /// 指定一个封装的对象来构造封装包
+        /// </summary>
+        /// <param name="source">需要封装的对象</param>
+        public PropertyBag(object source) : this()
+        {
+            this._source = source;
+        }
+
         #endregion
+
 
         #region 属性
 
         /// <summary>
         /// 属性集合
         /// </summary>
-        public BagPropertyDescriptorCollection Properties
+        public CustomPropertyDescriptorCollection Properties
         {
             get
             {
-                return _properties;
+                return this._properties;
             }
         }
 
@@ -74,11 +114,11 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         {
             get
             {
-                return _source;
+                return this._source;
             }
             set
             {
-                _source = value;
+                this._source = value;
             }
         }
 
@@ -89,7 +129,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         {
             get
             {
-                return _source;
+                return this._source;
             }
         }
 
@@ -103,7 +143,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         {
             get
             {
-                return _bagTypes;
+                return this._bagTypes;
             }
         }
 
@@ -115,7 +155,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         {
             get
             {
-                return _bags;
+                return this._bags;
             }
         }
 
@@ -131,7 +171,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public AttributeCollection GetAttributes()
         {
-            return TypeDescriptor.GetAttributes(this, true);
+            return TypeDescriptor.GetAttributes(this._source, true);
         }
 
         /// <summary>
@@ -140,7 +180,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public string GetClassName()
         {
-            return TypeDescriptor.GetClassName(this, true);
+            return TypeDescriptor.GetClassName(this._source, true);
         }
 
         /// <summary>
@@ -149,7 +189,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public string GetComponentName()
         {
-            return TypeDescriptor.GetComponentName(this, true);
+            return TypeDescriptor.GetComponentName(this._source, true);
         }
 
         /// <summary>
@@ -158,7 +198,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public TypeConverter GetConverter()
         {
-            return TypeDescriptor.GetConverter(this, true);
+            return TypeDescriptor.GetConverter(this._source, true);
         }
 
         /// <summary>
@@ -167,7 +207,8 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public EventDescriptor GetDefaultEvent()
         {
-            return TypeDescriptor.GetDefaultEvent(this, true);
+            //return TypeDescriptor.GetDefaultEvent(this, true);
+            return TypeDescriptor.GetDefaultEvent(true);
         }
 
         /// <summary>
@@ -176,7 +217,8 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public PropertyDescriptor GetDefaultProperty()
         {
-            return TypeDescriptor.GetDefaultProperty(this, true);
+            //return TypeDescriptor.GetDefaultProperty(this, true);
+            return TypeDescriptor.GetDefaultProperty(this._source);
         }
 
         /// <summary>
@@ -186,7 +228,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public object GetEditor(Type editorBaseType)
         {
-            return TypeDescriptor.GetEditor(this, editorBaseType, true);
+            return TypeDescriptor.GetEditor(this._source, editorBaseType, true);
         }
 
         /// <summary>
@@ -196,7 +238,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public EventDescriptorCollection  GetEvents(Attribute[] attributes)
         {
-            return TypeDescriptor.GetEvents(this, attributes, true);
+            return TypeDescriptor.GetEvents(this._source, attributes, true);
         }
 
         /// <summary>
@@ -205,7 +247,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public EventDescriptorCollection GetEvents()
         {
-            return TypeDescriptor.GetEvents(this, true);
+            return TypeDescriptor.GetEvents(this._source, true);
         }
 
         /// <summary>
@@ -234,15 +276,17 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <returns></returns>
         public object GetPropertyOwner(PropertyDescriptor pd)
         {
-            return this.Owner;
+            return Owner ;
         }
 
         #endregion
 
 
         #region 添加属性相关方法
+
         /// <summary>
         /// 添加一个属性
+        /// 传递componentType
         /// </summary>
         /// <param name="name">属性名称</param>
         /// <param name="displayName">属性显示的名称</param>
@@ -255,7 +299,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <param name="converter">转换器</param>
         /// <param name="editorType">编辑器</param>
         /// <param name="attributes">该属性的特性集合</param>
-        public BagPropertyDescriptor AddProperty(string name,
+        public CustomPropertyDescriptor AddProperty(string name,
             string displayName,
             string discription,
             string category,
@@ -267,7 +311,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
             Type editorType,
             Attribute[] attributes)
         {
-            BagPropertyDescriptor property = new BagPropertyDescriptor(name, displayName, discription,
+            CustomPropertyDescriptor property = new CustomPropertyDescriptor(name, displayName, discription,
                 category, isReadOnly, isBrowsable,
                 propertyType, componentType, converter, editorType,
                 attributes, this
@@ -278,6 +322,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
 
         /// <summary>
         /// 添加一个属性
+        /// 传递component对象
         /// </summary>
         /// <param name="name">属性名称</param>
         /// <param name="displayName">属性显示的名称</param>
@@ -290,7 +335,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <param name="converter">转换器</param>
         /// <param name="editorType">编辑器</param>
         /// <param name="attributes">该属性的特性集合</param>
-        public BagPropertyDescriptor AddProperty(string name,
+        public CustomPropertyDescriptor AddProperty(string name,
             string displayName,
             string discription,
             string category,
@@ -302,7 +347,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
             Type editorType,
             Attribute[] attributes)
         {
-            BagPropertyDescriptor property = new BagPropertyDescriptor(name, displayName, discription,
+            CustomPropertyDescriptor property = new CustomPropertyDescriptor(name, displayName, discription,
                 category, isReadOnly, isBrowsable,
                 propertyType, component, converter, editorType,
                 attributes, this
@@ -310,8 +355,6 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
             _properties.Add(property);
             return property;
         }
-
-
 
         #endregion
 
@@ -326,6 +369,8 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         /// <param name="value"></param>
         protected virtual void SetValue(object source, string propertyName, object value)
         {
+            LogWriter.WriteLog("PropertyBag -- SetValue");
+
             PropertyInfo pi = source.GetType().GetProperty(propertyName);
             if (pi.CanWrite)
             {
@@ -346,6 +391,8 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
 
         protected virtual object GetValue(object source, string propertyName)
         {
+            LogWriter.WriteLog("PropertyBag -- GetValue");
+
             object obj = null;
             PropertyInfo pi = source.GetType().GetProperty(propertyName);
             if (pi != null && pi.CanRead)
@@ -373,6 +420,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
 
         internal object InternelGetValue(object source, string propertyName)
         {
+
             object obj = GetValue(source, propertyName);
             if (obj != null)
             {
@@ -447,6 +495,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         #region 事件相关
 
         PropertyChangedHandler _changed;
+
         PropertyChangingHandler _changing;
 
         /// <summary>
@@ -457,11 +506,11 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         {
             add
             {
-                _changing += value;
+                this._changing += value;
             }
             remove
             {
-                _changing -= value;
+               this._changing -= value;
             }
         }
 
@@ -472,37 +521,49 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
         {
             add
             {
-                _changed += value;
+                this._changed += value;
             }
             remove
             {
-                _changed -= value;
+                this._changed -= value;
             }
         }
 
-
-        internal void OnPropertyChanged(object sender, string name, object value)
-        {
-            if (_changed != null)
-            {
-                _changed(sender, name, value);
-            }
-            if (_parentBag != null)
-            {
-                _parentBag.OnPropertyChanged(_parentBag.SourceObject, _parentPropertyName, SourceObject);
-                _parentBag.OnPropertyChanged(_parentBag.SourceObject, _parentPropertyName + "." + name, value);
-            }
-        }
-
+        /// <summary>
+        /// 属性值变化前
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        /// <param name="cancel"></param>
         internal void OnPropertyChanging(object sender, string name, object value, ref bool cancel)
         {
-            if (_changing != null)
+            if (this._changing != null)
             {
-                _changing(sender, name, value, ref cancel);
+                this._changing(sender, name, value, ref cancel);
             }
-            if (_parentBag != null && (!cancel))
+            if (this._parentBag != null && (!cancel))
             {
-                _parentBag.OnPropertyChanging(_parentBag.SourceObject, _parentPropertyName, SourceObject, ref cancel);
+                this._parentBag.OnPropertyChanging(this._parentBag.SourceObject, this._parentPropertyName, this.SourceObject, ref cancel);
+            }
+        }
+
+        /// <summary>
+        /// 属性值变化后
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        internal void OnPropertyChanged(object sender, string name, object value)
+        {
+            if (this._changed != null)
+            {
+                this._changed(sender, name, value);
+            }
+            if (this._parentBag != null)
+            {
+                this._parentBag.OnPropertyChanged(this._parentBag.SourceObject, this._parentPropertyName, this.SourceObject);
+                this._parentBag.OnPropertyChanged(this._parentBag.SourceObject, this._parentPropertyName + "." + name, value);
             }
         }
 
