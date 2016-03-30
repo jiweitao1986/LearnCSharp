@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design.Serialization;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CustomControl.Control.MyList
+namespace LearningCSharp.CustomControl.Controls.MyList
 {
     public class ScopeConverter : TypeConverter
     {

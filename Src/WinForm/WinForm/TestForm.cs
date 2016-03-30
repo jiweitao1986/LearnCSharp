@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LearningCSharp.WinForm.Test
+namespace LearningCSharp.WinForm
 {
-    public partial class Test : Form
+    public partial class TestForm : Form
     {
-        public Test()
+        public TestForm()
         {
             InitializeComponent();
         }
@@ -79,5 +79,9 @@ namespace LearningCSharp.WinForm.Test
         {
         }
 
+        private void myUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

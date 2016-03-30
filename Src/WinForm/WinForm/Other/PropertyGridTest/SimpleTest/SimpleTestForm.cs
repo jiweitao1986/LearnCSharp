@@ -8,14 +8,27 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LearningCSharp.CustomControl.Controls.MyUserControl;
 
-namespace LearningCSharp.WinForm.Other.PropertyGridTest
+namespace LearningCSharp.WinForm.Other.PropertyGridTest.SimpleTest
 {
-    public partial class SimplePropertyGridTestForm : Form
+    public partial class SimpleTestForm : Form
     {
-        public SimplePropertyGridTestForm()
+        public SimpleTestForm()
         {
             InitializeComponent();
+            this.SetUserControl();
+        }
+
+        private void SetUserControl()
+        {
+            MyUserControl userControl = new MyUserControl();
+            this.rightPropertyGrid.SelectedObject = userControl;
+        }
+
+
+        private void SetPerson()
+        {
 
             Person person = new Person()
             {
@@ -26,10 +39,9 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest
                 FavColor = Color.Red,
                 FavDay = DayOfWeek.Saturday
             };
-            
+            this.rightPropertyGrid.SelectedObject = person;
 
-            PropertyDescriptorCollection propDescriptors =  TypeDescriptor.GetProperties(person, true);
-            
+            //PropertyDescriptorCollection propDescriptors =  TypeDescriptor.GetProperties(person, true);
             //string result = string.Empty;
 
             //获取基本信息相关的属性
@@ -56,8 +68,6 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest
             //}
 
             //this.resultRichTextBox.Text = result;
-
-            this.rightPropertyGrid.SelectedObject = person;
         }
 
         /// <summary>
@@ -67,8 +77,7 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest
         /// <param name="e"></param>
         private void rightPropertyGrid_SelectedObjectsChanged(object sender, EventArgs e)
         {
-            Person person = ((PropertyGrid) sender).SelectedObject as Person;
-            //this.resultRichTextBox.Text = person.Name;
+
         }
 
         /// <summary>
@@ -78,8 +87,6 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest
         /// <param name="e"></param>
         private void rightPropertyGrid_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
-            Person person = ((PropertyGrid)s).SelectedObject as Person;
-            this.resultRichTextBox.Text = person.Name;
         }
     }
 }

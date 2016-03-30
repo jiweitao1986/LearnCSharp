@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.ComponentModel;
 
-namespace CustomControl.Control.MyList
+namespace LearningCSharp.CustomControl.Controls.MyList
 {
     [TypeConverter(typeof(ScopeConverter))]
     public class Scope

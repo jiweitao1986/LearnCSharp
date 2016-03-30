@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningCSharp.WinForm.Other.PropertyGridTest
+namespace LearningCSharp.WinForm.Other.PropertyGridTest.SimpleTest
 {
     [DefaultPropertyAttribute("Name")]
     class Person

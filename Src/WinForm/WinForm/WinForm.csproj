@@ -33,8 +33,9 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="CustomControl">
-      <HintPath>..\CustomControl\bin\Debug\CustomControl.dll</HintPath>
+    <Reference Include="LearningCSharp.CustomControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CustomControl\bin\Debug\LearningCSharp.CustomControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,15 +75,21 @@
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBagTestForm.Designer.cs">
       <DependentUpon>PropertyBagTestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Other\PropertyGridTest\SimpleTest\MyCustomControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Other\PropertyGridTest\SimpleTest\MyCustomControl.Designer.cs">
+      <DependentUpon>MyCustomControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other\PropertyGridTest\SimpleTest\Person.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\CustomPropertyDescriptorCollection.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\MyControlBag.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\PropertyBag.cs" />
-    <Compile Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.cs">
+    <Compile Include="Other\PropertyGridTest\SimpleTest\SimpleTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.Designer.cs">
-      <DependentUpon>SimplePropertyGridTestForm.cs</DependentUpon>
+    <Compile Include="Other\PropertyGridTest\SimpleTest\SimpleTestForm.Designer.cs">
+      <DependentUpon>SimpleTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,11 +111,11 @@
     <Compile Include="Demo\School\StudentList.Designer.cs">
       <DependentUpon>StudentList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test.cs">
+    <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Demo\DesignTime\DesignTimeTestForm.resx">
       <DependentUpon>DesignTimeTestForm.cs</DependentUpon>
@@ -119,8 +126,8 @@
     <EmbeddedResource Include="Other\PropertyGridTest\PropertyBagTest\PropertyBagTestForm.resx">
       <DependentUpon>PropertyBagTestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Other\PropertyGridTest\SimpleTest\SimplePropertyGridTestForm.resx">
-      <DependentUpon>SimplePropertyGridTestForm.cs</DependentUpon>
+    <EmbeddedResource Include="Other\PropertyGridTest\SimpleTest\SimpleTestForm.resx">
+      <DependentUpon>SimpleTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,8 +148,8 @@
     <EmbeddedResource Include="Demo\School\StudentList.resx">
       <DependentUpon>StudentList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,7 +172,8 @@
     <Folder Include="Container\TabControl\" />
     <Folder Include="Container\TableLayoutPanel\" />
     <Folder Include="Custom\" />
-    <Folder Include="Other\PropertyGridTest\OtherTest\" />
+    <Folder Include="Other\PropertyGridTest\SimpleTest\Converters\" />
+    <Folder Include="Other\PropertyGridTest\SimpleTest\Editors\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

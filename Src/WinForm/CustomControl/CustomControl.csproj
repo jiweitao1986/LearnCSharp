@@ -7,8 +7,8 @@
     <ProjectGuid>{22B66C78-755D-4BA6-86AA-F4CA05957AC4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomControl</RootNamespace>
-    <AssemblyName>CustomControl</AssemblyName>
+    <RootNamespace>LearningCSharp.CustomControl</RootNamespace>
+    <AssemblyName>LearningCSharp.CustomControl</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,37 +41,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\MyLabel\MyLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Control\MyList\MyList.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Control\MyList\Scope.cs" />
-    <Compile Include="Control\MyList\ScopeConverter.cs" />
-    <Compile Include="Control\MyList\ScopeDropEditor.cs" />
-    <Compile Include="Control\MyList\ScopeDropEditorControl.cs">
+    <Compile Include="Entities\CssStyle.cs" />
+    <Compile Include="Converters\CssStyleConverter.cs" />
+    <Compile Include="Controls\MyUserControl\MyUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\MyList\ScopeDropEditorControl.Designer.cs">
+    <Compile Include="Controls\MyUserControl\MyUserControl.Designer.cs">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MyLabel\MyLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MyList\MyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MyList\Scope.cs" />
+    <Compile Include="Controls\MyList\ScopeConverter.cs" />
+    <Compile Include="Controls\MyList\ScopeDropEditor.cs" />
+    <Compile Include="Controls\MyList\ScopeDropEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MyList\ScopeDropEditorControl.Designer.cs">
       <DependentUpon>ScopeDropEditorControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\MyList\ScopeModalEditor.cs" />
-    <Compile Include="Control\MyList\ScopeModalEditorForm.cs">
+    <Compile Include="Controls\MyList\ScopeModalEditor.cs" />
+    <Compile Include="Controls\MyList\ScopeModalEditorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Control\MyList\ScopeModalEditorForm.Designer.cs">
+    <Compile Include="Controls\MyList\ScopeModalEditorForm.Designer.cs">
       <DependentUpon>ScopeModalEditorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Control\MyList\ScopeDropEditorControl.resx">
+    <EmbeddedResource Include="Controls\MyUserControl\MyUserControl.resx">
+      <DependentUpon>MyUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MyList\ScopeDropEditorControl.resx">
       <DependentUpon>ScopeDropEditorControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\MyList\ScopeModalEditorForm.resx">
+    <EmbeddedResource Include="Controls\MyList\ScopeModalEditorForm.resx">
       <DependentUpon>ScopeModalEditorForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Editors\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

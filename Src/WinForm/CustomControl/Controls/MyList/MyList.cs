@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomControl.Control.MyList
+namespace LearningCSharp.CustomControl.Controls.MyList
 {
     public class MyList : System.Windows.Forms.Control
     {

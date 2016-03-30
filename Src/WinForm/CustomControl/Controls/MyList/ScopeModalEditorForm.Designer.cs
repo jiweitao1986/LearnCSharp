@@ -1,4 +1,4 @@
-﻿namespace CustomControl.Control.MyList
+﻿namespace LearningCSharp.CustomControl.Controls.MyList
 {
     partial class ScopeModalEditorForm
     {

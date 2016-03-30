@@ -17,11 +17,12 @@ namespace LearningCSharp.WinForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //测试
             //Application.Run(new StudentList());
             //Application.Run(new Test.Test());
 
-            Application.Run(new Other.PropertyGridTest.PropertyBagTest.PropertyBagTestForm());
+            Application.Run(new TestForm());
+            //Application.Run(new Other.PropertyGridTest.SimpleTest.SimpleTestForm());
+            
         }
     }
 }

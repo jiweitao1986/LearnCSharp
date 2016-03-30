@@ -1,6 +1,8 @@
-﻿namespace LearningCSharp.WinForm.Test
+﻿using LearningCSharp.CustomControl.Entities;
+
+namespace LearningCSharp.WinForm
 {
-    partial class Test
+    partial class TestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +30,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.myUserControl1 = new LearningCSharp.CustomControl.Controls.MyUserControl.MyUserControl();
             this.SuspendLayout();
             // 
-            // propertyGrid1
+            // myUserControl1
             // 
-            this.propertyGrid1.Location = new System.Drawing.Point(525, 84);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(219, 450);
-            this.propertyGrid1.TabIndex = 1;
+            this.myUserControl1.CssStyle = ((CssStyle)(new CssStyle()));
+            this.myUserControl1.Location = new System.Drawing.Point(41, 103);
+            this.myUserControl1.Name = "myUserControl1";
+            this.myUserControl1.Size = new System.Drawing.Size(250, 106);
+            this.myUserControl1.TabIndex = 0;
             // 
-            // Test
+            // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoScrollMinSize = new System.Drawing.Size(800, 800);
-            this.ClientSize = new System.Drawing.Size(813, 760);
-            this.Controls.Add(this.propertyGrid1);
-            this.Name = "Test";
-            this.Text = "Test";
+            this.ClientSize = new System.Drawing.Size(713, 441);
+            this.Controls.Add(this.myUserControl1);
+            this.Name = "TestForm";
+            this.Text = "测试表单";
             this.Load += new System.EventHandler(this.Test_Load);
             this.Click += new System.EventHandler(this.Test_Click);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Test_MouseMove);
@@ -55,27 +57,26 @@
 
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         #endregion
 
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private CustomControl.Controls.MyUserControl.MyUserControl myUserControl1;
     }
 }

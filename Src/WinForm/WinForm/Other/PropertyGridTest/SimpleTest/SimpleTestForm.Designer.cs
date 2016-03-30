@@ -1,6 +1,6 @@
-﻿namespace LearningCSharp.WinForm.Other.PropertyGridTest
+﻿namespace LearningCSharp.WinForm.Other.PropertyGridTest.SimpleTest
 {
-    partial class SimplePropertyGridTestForm
+    partial class SimpleTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             // 
             // rightPropertyGrid
             // 
+            this.rightPropertyGrid.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.rightPropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightPropertyGrid.Location = new System.Drawing.Point(0, 0);
             this.rightPropertyGrid.Name = "rightPropertyGrid";
@@ -62,15 +63,15 @@
             this.resultRichTextBox.TabIndex = 2;
             this.resultRichTextBox.Text = "";
             // 
-            // SimplePropertyGridTestForm
+            // SimpleTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 529);
             this.Controls.Add(this.resultRichTextBox);
             this.Controls.Add(this.panel1);
-            this.Name = "SimplePropertyGridTestForm";
-            this.Text = "SimplePropertyGridTestForm";
+            this.Name = "SimpleTestForm";
+            this.Text = "SimpleTestForm";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
