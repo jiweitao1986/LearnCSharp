@@ -25,7 +25,7 @@ namespace LearnCSharp.Basic
             //Types.EnumTest.Run();
             //IoC.Autofac.AutofacTest.Run();
 
-            File.FileTest.ReadAllTextTest();
+            File.FileTest.Run();
 
             Console.ReadKey();
         }

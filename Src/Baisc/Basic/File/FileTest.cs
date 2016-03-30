@@ -21,7 +21,9 @@ namespace LearnCSharp.Basic.File
 
             //Person p1 = new Person("张三");
             //Console.WriteLine(p1.GetType());
-            ReadAllTextTest();
+            //ReadAllTextTest
+
+            PathTest();
 
         }
 
@@ -32,6 +34,13 @@ namespace LearnCSharp.Basic.File
             string str = System.IO.File.ReadAllText(path);
 
             Console.Write(str);
+        }
+
+
+        public static void PathTest()
+        {
+            string pathString = @"C:\Windows\System32\drivers\etc\hosts";
+            Console.WriteLine(Path.GetFileName(pathString));
         }
 
     }

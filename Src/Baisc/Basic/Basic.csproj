@@ -52,10 +52,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\..\Bin\Autofac.dll</HintPath>
+      <HintPath>..\..\..\Bin\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Configuration">
-      <HintPath>..\..\Bin\Autofac.Configuration.dll</HintPath>
+      <HintPath>..\..\..\Bin\Autofac.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="BasicMock">
       <HintPath>..\BasicMock\bin\Debug\BasicMock.dll</HintPath>
