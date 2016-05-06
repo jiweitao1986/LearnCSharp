@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\ADMINI~1\AppData\Local\Temp\vsAC6C.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\jiweitao\AppData\Local\Temp\vsACA7.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,7 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\ADMINI~1\AppData\Local\Temp\vsAC6C.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\jiweitao\AppData\Local\Temp\vsACA7.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,6 +52,18 @@
     <Compile Include="Behavioral\TemplateMethod\Beverage\Coffee.cs" />
     <Compile Include="Behavioral\TemplateMethod\Beverage\Beverage.cs" />
     <Compile Include="Behavioral\TemplateMethod\Beverage\Tea.cs" />
+    <Compile Include="Creational\FactoryMethod\Simple\IFactory.cs" />
+    <Compile Include="Creational\FactoryMethod\Simple\IProduct.cs" />
+    <Compile Include="Creational\FactoryMethod\Simple\ProductA.cs" />
+    <Compile Include="Creational\FactoryMethod\Simple\FactoryA.cs" />
+    <Compile Include="Creational\FactoryMethod\Simple\ProductB.cs" />
+    <Compile Include="Creational\FactoryMethod\Simple\FactoryB.cs" />
+    <Compile Include="Creational\FactoryMethod\Simple\Test.cs" />
+    <Compile Include="Creational\SimpleFactory\Simple\Factory.cs" />
+    <Compile Include="Creational\SimpleFactory\Simple\IProduct.cs" />
+    <Compile Include="Creational\SimpleFactory\Simple\ProductA.cs" />
+    <Compile Include="Creational\SimpleFactory\Simple\ProductB.cs" />
+    <Compile Include="Creational\SimpleFactory\Simple\Test.cs" />
     <Compile Include="Creational\Singleton\SimpleSingleton\EagerSingleton.cs" />
     <Compile Include="Creational\Singleton\SimpleSingleton\LazySingleton.cs" />
     <Compile Include="Program.cs" />
@@ -70,9 +82,8 @@
     <Folder Include="Behavioral\State\" />
     <Folder Include="Behavioral\Strategy\" />
     <Folder Include="Behavioral\Visitor\" />
-    <Folder Include="Creational\AbstractFactory\" />
+    <Folder Include="Creational\AbstractFactory\Simple\" />
     <Folder Include="Creational\Builder\" />
-    <Folder Include="Creational\FactoryMethod\" />
     <Folder Include="Creational\Prototype\" />
     <Folder Include="Structural\Adapter\" />
     <Folder Include="Structural\Bridge\" />

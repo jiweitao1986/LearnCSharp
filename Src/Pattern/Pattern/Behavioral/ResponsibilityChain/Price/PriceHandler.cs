@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearningCSharp.Pattern.Behavioral.ResponsibilityChain.Price
 {
-    abstract class PriceHandler
+    public abstract class PriceHandler
     {
         protected PriceHandler successor;
 

@@ -31,11 +31,20 @@ namespace LearnCSharp.Basic.Types
     {
         public static void Run()
         {
-            GetNamesTest();
+            //GetNamesTest();
             GetValuesTest();
-            ParseTest();
-            ToObjectTest();
-            GetDescriptionsTest();
+            //ParseTest();
+            //ToObjectTest();
+            //GetDescriptionsTest();
+        }
+
+        public static void ReflectionTest()
+        {
+            //Type threeDayType = typeof(ThreeDay);
+            //FieldInfo fieldInfo = threeDayType.GetField("Today");
+            //foreach (object value in )
+
+
         }
 
         /// <summary>
@@ -54,12 +63,15 @@ namespace LearnCSharp.Basic.Types
             Console.WriteLine("");
         }
 
+        /// <summary>
+        /// GetValues方法测试
+        /// </summary>
         public static void GetValuesTest()
         {
             Console.WriteLine("//////////GetValuesTest//////////");
             Type threeDayType = typeof(ThreeDay);
             var values = Enum.GetValues(threeDayType);
-            foreach (int value in values)
+            foreach (object value in values)
             {
                 Console.WriteLine(value.ToString());
             }

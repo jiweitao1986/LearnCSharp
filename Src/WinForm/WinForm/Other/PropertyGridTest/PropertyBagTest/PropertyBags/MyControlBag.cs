@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +45,29 @@ namespace LearningCSharp.WinForm.Other.PropertyGridTest.PropertyBagTest.Property
                 typeof(DataBindingBag), myControl.DataBinding, new DataBindingConverter(), null, null
             );
 
+        }
+
+
+        public TypeConverter GetConverter(string converterString)
+        {
+            if (string.IsNullOrEmpty(converterString))
+            {
+                return null;
+            }
+
+            Type converterType = Type.GetType(converterString);
+            if (converterType == null)
+            {
+                return null;
+            }
+
+            return (Activator.CreateInstance(converterType) as TypeConverter);
+
+        }
+
+        public UITypeEditor GetEditor(string editorString)
+        {
+            return null;
         }
     }
 

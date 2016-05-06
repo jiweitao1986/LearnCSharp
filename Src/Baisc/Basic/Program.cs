@@ -26,10 +26,8 @@ namespace LearnCSharp.Basic
             //IoC.Autofac.AutofacTest.Run();
 
             //File.FileTest.Run();
-
-            string strF = "10000.4343";
-
-            Console.WriteLine(Single.Parse(strF).ToString("P#,#.00S"));
+            Types.EnumTest.Run();
+            
 
             Console.ReadKey();
         }

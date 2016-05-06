@@ -8,7 +8,7 @@ namespace LearningCSharp.Pattern.Behavioral.ResponsibilityChain.Price
 {
     class Manager : PriceHandler
     {
-        public void ProcessDiscount(float discount)
+        public override void ProcessDiscount(float discount)
         {
             if (discount <= 0.2)
             {
