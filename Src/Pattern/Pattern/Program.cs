@@ -10,8 +10,9 @@ namespace LearningCSharp.Pattern
     {
         static void Main(string[] args)
         {
-            Creational.SimpleFactory.Simple.Test.Run();
-            Creational.FactoryMethod.Simple.Test.Run();
+            //Creational.SimpleFactory.Simple.Test.Run();
+            //Creational.FactoryMethod.Simple.Test.Run();
+            Creational.AbstractFactory.Simple.Test.Run();
         }
     }
 }

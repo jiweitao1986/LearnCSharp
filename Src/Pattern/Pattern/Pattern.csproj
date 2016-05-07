@@ -52,6 +52,16 @@
     <Compile Include="Behavioral\TemplateMethod\Beverage\Coffee.cs" />
     <Compile Include="Behavioral\TemplateMethod\Beverage\Beverage.cs" />
     <Compile Include="Behavioral\TemplateMethod\Beverage\Tea.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\Factory1.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\Factory2.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\IFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\IProductA.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\IProductB.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\ProductA1.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\ProductA2.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\ProductB1.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\ProductB2.cs" />
+    <Compile Include="Creational\AbstractFactory\Simple\Test.cs" />
     <Compile Include="Creational\FactoryMethod\Simple\IFactory.cs" />
     <Compile Include="Creational\FactoryMethod\Simple\IProduct.cs" />
     <Compile Include="Creational\FactoryMethod\Simple\ProductA.cs" />
@@ -82,7 +92,6 @@
     <Folder Include="Behavioral\State\" />
     <Folder Include="Behavioral\Strategy\" />
     <Folder Include="Behavioral\Visitor\" />
-    <Folder Include="Creational\AbstractFactory\Simple\" />
     <Folder Include="Creational\Builder\" />
     <Folder Include="Creational\Prototype\" />
     <Folder Include="Structural\Adapter\" />
