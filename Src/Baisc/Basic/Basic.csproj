@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LearnCSharp.Basic</RootNamespace>
-    <AssemblyName>LearningCSharp.Basic</AssemblyName>
+    <AssemblyName>LearnCSharp.Basic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>发布\</PublishUrl>
@@ -102,8 +102,10 @@
     <Compile Include="Other\ExtendMethod\PersonExtensionTest.cs" />
     <Compile Include="Other\ExtendMethod\StringExtensionTest.cs" />
     <Compile Include="Other\OverrideHideTest.cs" />
-    <Compile Include="Reflection\ReflectionPerson.cs" />
+    <Compile Include="Reflection\AssemblyTest.cs" />
+    <Compile Include="Reflection\Person.cs" />
     <Compile Include="Reflection\ReflectionTest.cs" />
+    <Compile Include="Reflection\TypeTest.cs" />
     <Compile Include="RegExp\RegExpTest.cs" />
     <Compile Include="TmpTest.cs" />
     <Compile Include="Types\EnumTest.cs" />
