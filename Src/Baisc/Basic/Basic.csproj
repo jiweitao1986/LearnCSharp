@@ -96,6 +96,8 @@
     <Compile Include="IoC\Autofac\User.cs" />
     <Compile Include="Lambda\LambdaDemo.cs" />
     <Compile Include="OOP\Constructor\InheritanceTest.cs" />
+    <Compile Include="OOP\Constructor\StaticConstructorTest.cs" />
+    <Compile Include="OOP\Constructor\ThisBaseTest.cs" />
     <Compile Include="Other\ChartDemo.cs" />
     <Compile Include="Other\DebugDemo.cs" />
     <Compile Include="Other\DelegateDemo.cs" />

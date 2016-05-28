@@ -12,7 +12,8 @@ namespace LearningCSharp.Pattern
         {
             //Creational.SimpleFactory.Simple.Test.Run();
             //Creational.FactoryMethod.Simple.Test.Run();
-            Creational.AbstractFactory.Simple.Test.Run();
+            //Creational.AbstractFactory.Simple.Test.Run();
+            Behavioral.Observer.Simple.Test.Run();
         }
     }
 }

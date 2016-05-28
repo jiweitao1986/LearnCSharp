@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavioral\Observer\Simple\ConcreteObserverA.cs" />
+    <Compile Include="Behavioral\Observer\Simple\ConcreteObserverB.cs" />
+    <Compile Include="Behavioral\Observer\Simple\ConcreteSubject.cs" />
+    <Compile Include="Behavioral\Observer\Simple\Observer.cs" />
+    <Compile Include="Behavioral\Observer\Simple\Subject.cs" />
+    <Compile Include="Behavioral\Observer\Simple\Test.cs" />
     <Compile Include="Behavioral\ResponsibilityChain\Price\CEO.cs" />
     <Compile Include="Behavioral\ResponsibilityChain\Price\Director.cs" />
     <Compile Include="Behavioral\ResponsibilityChain\Price\Manager.cs" />
@@ -78,7 +84,6 @@
     <Folder Include="Behavioral\Iterator\" />
     <Folder Include="Behavioral\Mediator\" />
     <Folder Include="Behavioral\Memento\" />
-    <Folder Include="Behavioral\Observer\" />
     <Folder Include="Behavioral\State\" />
     <Folder Include="Behavioral\Strategy\" />
     <Folder Include="Behavioral\Visitor\" />
