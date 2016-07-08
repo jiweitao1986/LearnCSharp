@@ -101,6 +101,7 @@
     <Compile Include="Other\ChartDemo.cs" />
     <Compile Include="Other\DebugDemo.cs" />
     <Compile Include="Other\DelegateDemo.cs" />
+    <Compile Include="Other\ExceptionHandle\ExceptionTest.cs" />
     <Compile Include="Other\ExtendMethod\PersonExtensionTest.cs" />
     <Compile Include="Other\ExtendMethod\StringExtensionTest.cs" />
     <Compile Include="Other\OverrideHideTest.cs" />

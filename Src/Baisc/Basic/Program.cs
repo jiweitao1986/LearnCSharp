@@ -31,9 +31,12 @@ namespace LearnCSharp.Basic
             //Reflection
             //Reflection.AssemblyTest.Run();
             //Reflection.TypeTest.Run();
-            OOP.Constructor.StaticConstructorTest.Run();
+            //OOP.Constructor.StaticConstructorTest.Run();
+            Other.ExceptionHandle.ExceptionTest.Run();
 
             Console.ReadKey();
         }
+
+
     }
 }
