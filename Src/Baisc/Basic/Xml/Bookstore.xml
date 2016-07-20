@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Bookstore >
+    <Book>
+        <Title>C#入门经典（第6版）</Title>
+        <Price>50</Price>
+        <Authors>
+            <Author>
+                <Name>沃森(Karli Watson) </Name>
+                <Country>美国</Country>
+            </Author>
+            <Author>
+                <Name>内格尔(Christian Nagel)</Name>
+                <Country>美国</Country>
+            </Author>
+        </Authors>
+    </Book>
+    <Book>
+        <Title>C#高级编程（第8版）</Title>
+        <Price>50</Price>
+        <Authors>
+            <Author>
+                <Name>内格尔（Christian Nagel）</Name>
+                <Country>美国</Country>
+            </Author>
+            <Author>
+                <Name>沃森（Karli Watson）</Name>
+                <Country>美国</Country>
+            </Author>
+            <Author>
+                <Name>依维恩（Bill Evjen）</Name>
+                <Country>美国</Country>
+            </Author>
+            <Author>
+                <Name>格林（Jay Glynn）</Name>
+                <Country>美国</Country>
+            </Author>
+            <Author>
+                <Name>斯金纳（Morgan Skinner）</Name>
+                <Country>美国</Country>
+            </Author>
+        </Authors>
+    </Book>
+
+</Bookstore>
