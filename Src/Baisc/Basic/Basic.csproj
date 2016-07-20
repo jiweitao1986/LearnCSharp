@@ -129,6 +129,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Xml\Bookstore.xml" />
     <Content Include="Xml\XmlDemo.xml" />
   </ItemGroup>
   <ItemGroup>
