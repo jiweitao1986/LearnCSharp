@@ -74,6 +74,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collection\Animals\Animal.cs" />
+    <Compile Include="Collection\Animals\Chicken.cs" />
+    <Compile Include="Collection\Animals\Cow.cs" />
     <Compile Include="Collection\ArrayDemo.cs" />
     <Compile Include="Collection\ListTest.cs" />
     <Compile Include="CssParser\BorderParser.cs" />
@@ -95,6 +98,7 @@
     <Compile Include="IoC\Autofac\OracleDatabase.cs" />
     <Compile Include="IoC\Autofac\User.cs" />
     <Compile Include="Lambda\LambdaDemo.cs" />
+    <Compile Include="Linq\Simple\SimpleTest.cs" />
     <Compile Include="OOP\Constructor\InheritanceTest.cs" />
     <Compile Include="OOP\Constructor\StaticConstructorTest.cs" />
     <Compile Include="OOP\Constructor\ThisBaseTest.cs" />
