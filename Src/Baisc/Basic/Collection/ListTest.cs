@@ -7,7 +7,7 @@ using LearnCSharp.Basic.Data;
 
 namespace LearnCSharp.Basic.Collection
 {
-    class ListTest
+    public class ListTest
     {
         public static void Run()
         {

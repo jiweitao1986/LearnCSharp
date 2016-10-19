@@ -15,7 +15,6 @@ namespace LearnCSharp.Basic
     {
         public static void Run()
         {
-        
         }
     }
 

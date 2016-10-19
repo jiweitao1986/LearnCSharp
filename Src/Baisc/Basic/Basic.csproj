@@ -117,7 +117,6 @@
     <Compile Include="TmpTest.cs" />
     <Compile Include="Types\EnumTest.cs" />
     <Compile Include="Types\TypeTest.cs" />
-    <Compile Include="Xml\XmlDemo.cs" />
     <Compile Include="Other\ConvertDemo.cs" />
     <Compile Include="Db\DataSetDemo.cs" />
     <Compile Include="Other\DateTimeDemo.cs" />
@@ -128,13 +127,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Other\StringDemo.cs" />
     <Compile Include="Other\WorkSort.cs" />
+    <Compile Include="Xml\XmlTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Xml\Bookstore.xml" />
-    <Content Include="Xml\XmlDemo.xml" />
+    <Content Include="Xml\XmlFiles\Bookstore.xml" />
+    <Content Include="Xml\XmlFiles\XmlTest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Other\Attribute\" />
