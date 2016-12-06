@@ -21,8 +21,11 @@ namespace LearnCSharp.Basic
             //Other.ExceptionHandle.ExceptionTest.Run();
             //Linq.Simple.SimpleTest.Run();
             //Xml.XmlTest.Run();
+            //TmpTest.Run();
 
-            TmpTest.Run();
+            Other.DateTimeTest.Run();
+
+
             Console.ReadKey();
         }
 
