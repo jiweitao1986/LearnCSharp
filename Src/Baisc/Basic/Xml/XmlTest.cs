@@ -18,7 +18,9 @@ namespace LearnCSharp.Basic.Xml
         public static void Run()
         {
 
-            createXmlTest();
+            //LoadXmlFileTest();
+            //CreateXmlTest();
+            MoveElementTest();
         }
 
         /// <summary>
@@ -54,7 +56,7 @@ namespace LearnCSharp.Basic.Xml
         /// <summary>
         /// 创建XML文档测试
         /// </summary>
-        public static void createXmlTest()
+        public static void CreateXmlTest()
         {
             XmlDocument personDoc = new XmlDocument();
             XmlDeclaration persionDeclaration = personDoc.CreateXmlDeclaration("1.0", "UTF-8", "");
@@ -81,5 +83,40 @@ namespace LearnCSharp.Basic.Xml
             Console.WriteLine(personDoc.OuterXml);
         }
 
+
+        /// <summary>
+        /// 移动元素
+        /// </summary>
+        public static void MoveElementTest()
+        {
+            XmlDocument doc = new XmlDocument();
+
+            XmlElement wrapperElem = doc.CreateElement("Wrapper");
+            doc.AppendChild(wrapperElem);
+
+
+            XmlElement firstElem = doc.CreateElement("First");
+            wrapperElem.AppendChild(firstElem);
+
+            XmlElement secondElem = doc.CreateElement("Second");
+            wrapperElem.AppendChild(secondElem);
+
+            XmlElement thirdElem = doc.CreateElement("Third");
+            thirdElem.InnerXml = "<name>Second Name !!!</name>";
+            wrapperElem.AppendChild(thirdElem);
+
+            //
+            Console.WriteLine(doc.OuterXml);
+
+            //
+            XmlNode nameElem = thirdElem.FirstChild;
+            thirdElem.RemoveChild(nameElem);
+            secondElem.AppendChild(nameElem);
+            Console.WriteLine(doc.OuterXml);
+
+
+
+
+        }
     }
 }

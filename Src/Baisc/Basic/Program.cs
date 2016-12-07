@@ -20,10 +20,9 @@ namespace LearnCSharp.Basic
             //OOP.Constructor.StaticConstructorTest.Run();
             //Other.ExceptionHandle.ExceptionTest.Run();
             //Linq.Simple.SimpleTest.Run();
-            //Xml.XmlTest.Run();
+            Xml.XmlTest.Run();
             //TmpTest.Run();
-
-            Other.DateTimeTest.Run();
+            //Other.DateTimeTest.Run();
 
 
             Console.ReadKey();
