@@ -85,6 +85,8 @@
     <Compile Include="CssParser\EnumParser.cs" />
     <Compile Include="CssParser\WidthParser.cs" />
     <Compile Include="Data\Employee.cs" />
+    <Compile Include="Db\OracleTest.cs" />
+    <Compile Include="Delegate\ActionFuncTest.cs" />
     <Compile Include="Event\Event.cs" />
     <Compile Include="Event\EventDemo.cs" />
     <Compile Include="Event\ConnectEventDemo.cs" />
@@ -97,14 +99,14 @@
     <Compile Include="IoC\Autofac\MssDatabase.cs" />
     <Compile Include="IoC\Autofac\OracleDatabase.cs" />
     <Compile Include="IoC\Autofac\User.cs" />
-    <Compile Include="Lambda\LambdaDemo.cs" />
+    <Compile Include="Lambda\LambdaTest.cs" />
     <Compile Include="Linq\Simple\SimpleTest.cs" />
     <Compile Include="OOP\Constructor\InheritanceTest.cs" />
     <Compile Include="OOP\Constructor\StaticConstructorTest.cs" />
     <Compile Include="OOP\Constructor\ThisBaseTest.cs" />
     <Compile Include="Other\ChartDemo.cs" />
     <Compile Include="Other\DebugDemo.cs" />
-    <Compile Include="Other\DelegateDemo.cs" />
+    <Compile Include="Delegate\SimpleTest.cs" />
     <Compile Include="Other\ExceptionHandle\ExceptionTest.cs" />
     <Compile Include="Other\ExtendMethod\PersonExtensionTest.cs" />
     <Compile Include="Other\ExtendMethod\StringExtensionTest.cs" />
@@ -118,9 +120,9 @@
     <Compile Include="Types\EnumTest.cs" />
     <Compile Include="Types\TypeTest.cs" />
     <Compile Include="Other\ConvertDemo.cs" />
-    <Compile Include="Db\DataSetDemo.cs" />
+    <Compile Include="Db\DataSetTest.cs" />
     <Compile Include="Other\DateTimeTest.cs" />
-    <Compile Include="Db\DbDemo.cs" />
+    <Compile Include="Db\SqlServerTest.cs" />
     <Compile Include="Collection\Dict.cs" />
     <Compile Include="Json\JsonTest.cs" />
     <Compile Include="Program.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Collections;
 using System.Xml;
-
+using Newtonsoft.Json;
 
 namespace LearnCSharp.Basic
 {
@@ -15,9 +15,16 @@ namespace LearnCSharp.Basic
     {
         public static void Run()
         {
-            DateTime dt = DateTime.Now;
+            List<String> names = new List<String>();
+            names.Add("Bruce");
+            names.Add("Alfred");
+            names.Add("Tim");
+            names.Add("Richard");
 
-            Console.WriteLine(dt.ToString("HHmm"));
+            names.ForEach(name =>
+            {
+                Console.WriteLine(name);
+            });
 
         }
     }

@@ -7,6 +7,10 @@ namespace LearnCSharp.Basic
     {
         static void Main(string[] args)
         {
+            //临时测试
+            Utils.OutputUtil.ShowTitle("Tmp Test");
+            TmpTest.Run();
+
             //Collection.ListTest.Run();
             //Types.EnumTest.Run();
             //IoC.Autofac.AutofacTest.Run();
@@ -20,9 +24,12 @@ namespace LearnCSharp.Basic
             //OOP.Constructor.StaticConstructorTest.Run();
             //Other.ExceptionHandle.ExceptionTest.Run();
             //Linq.Simple.SimpleTest.Run();
-            Xml.XmlTest.Run();
-            //TmpTest.Run();
+            //Xml.XmlTest.Run();
             //Other.DateTimeTest.Run();
+            //Db.SqlServerTest.Run();
+
+            Delegate.ActionFuncTest.Run();
+
 
 
             Console.ReadKey();

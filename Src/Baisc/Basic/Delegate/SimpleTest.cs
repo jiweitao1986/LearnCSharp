@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnCSharp.Basic.Other
 {
-    class DelegateDemo
+    class DelegateTest
     {
 
         public static void Run()

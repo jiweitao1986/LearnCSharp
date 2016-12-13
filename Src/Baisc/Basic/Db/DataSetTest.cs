@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using System.Data;
 using System.Data.SqlClient;
 
 
-namespace LearnCSharp.Basic
+namespace LearnCSharp.Basic.Db
 {
-    class DataSetDemo
+    class DataSetTest
     {
         /// <summary>
         /// 连接数据库

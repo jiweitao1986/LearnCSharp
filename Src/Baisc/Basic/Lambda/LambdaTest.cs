@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnCSharp.Basic.Lambda
 {
-    class LambdaDemo
+    class LambdaTest
     {
         delegate int intDel(int i);
 
