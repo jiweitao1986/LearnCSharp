@@ -31,7 +31,7 @@ namespace LearnCSharp.Basic.Delegate
         /// </summary>
         public static void ActionTest()
         {
-            Utils.OutputUtil.ShowTitle("Action Test");
+            OutputUtil.ShowTitle("Action Test");
 
             SayHiDelegate hi = new SayHiDelegate(SayHi);
             hi("Zhang San（Delegate）");
@@ -62,7 +62,7 @@ namespace LearnCSharp.Basic.Delegate
         /// </summary>
         public static void FuncTest()
         {
-            Utils.OutputUtil.ShowTitle("Func Test");
+            OutputUtil.ShowTitle("Func Test");
 
             // 委托构造函数
             GetFullNameDelegate getFullName = new GetFullNameDelegate(GetFullName);

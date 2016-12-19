@@ -91,7 +91,9 @@
     <Compile Include="Event\EventDemo.cs" />
     <Compile Include="Event\ConnectEventDemo.cs" />
     <Compile Include="Event\TimerEventDemo.cs" />
+    <Compile Include="File\FileStreamTest.cs" />
     <Compile Include="File\FileTest.cs" />
+    <Compile Include="GDI\CaptchaTest.cs" />
     <Compile Include="IoC\Autofac\AutofacTest.cs" />
     <Compile Include="IoC\Autofac\DatabaseManager.cs" />
     <Compile Include="IoC\Autofac\IDatabase.cs" />

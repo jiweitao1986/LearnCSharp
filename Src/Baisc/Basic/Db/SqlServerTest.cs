@@ -2,8 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 
-using LearnCSharp.Basic.Utils;
-
 namespace LearnCSharp.Basic.Db
 {
     public static class SqlServerTest

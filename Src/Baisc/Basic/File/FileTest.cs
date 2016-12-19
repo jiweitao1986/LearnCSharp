@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp.Basic.File
+namespace LearnCSharp.Basic
 {
     class FileTest
     {
@@ -41,6 +41,10 @@ namespace LearnCSharp.Basic.File
         {
             string pathString = @"C:\Windows\System32\drivers\etc\hosts";
             Console.WriteLine(Path.GetFileName(pathString));
+        }
+
+        public static void FileStreamReadTest()
+        {
         }
 
     }

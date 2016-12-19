@@ -8,7 +8,7 @@ namespace LearnCSharp.Basic
         static void Main(string[] args)
         {
             //临时测试
-            Utils.OutputUtil.ShowTitle("Tmp Test");
+            OutputUtil.ShowTitle("Tmp Test");
             TmpTest.Run();
 
             //Collection.ListTest.Run();
@@ -28,7 +28,7 @@ namespace LearnCSharp.Basic
             //Other.DateTimeTest.Run();
             //Db.SqlServerTest.Run();
 
-            Delegate.ActionFuncTest.Run();
+            CaptchaTest.Run();
 
 
 

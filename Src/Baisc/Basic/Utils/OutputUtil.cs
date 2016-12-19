@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LearnCSharp.Basic.Utils
+namespace LearnCSharp.Basic
 {
     public static class OutputUtil
     {
