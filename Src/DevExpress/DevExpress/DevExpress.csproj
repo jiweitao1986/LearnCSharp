@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DevExpress</RootNamespace>
     <AssemblyName>DevExpress</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,64 +34,62 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v10.2">
-      <HintPath>..\..\Bin\DevExpress.Data.v10.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.Data.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2.10.2.8.0.Fakes">
+      <HintPath>FakesAssemblies\DevExpress.Data.v10.2.10.2.8.0.Fakes.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Design.v10.2">
-      <HintPath>..\..\Bin\DevExpress.Design.v10.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.Design.v10.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Utils.v10.2">
-      <HintPath>..\..\Bin\DevExpress.Utils.v10.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.Utils.v10.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v10.2">
-      <HintPath>..\..\Bin\DevExpress.XtraBars.v10.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraBars.v10.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v10.2.Design">
-      <HintPath>..\..\Bin\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v10.2">
-      <HintPath>..\..\Bin\DevExpress.XtraEditors.v10.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraEditors.v10.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v10.2.Design">
-      <HintPath>..\..\Bin\DevExpress.XtraEditors.v10.2.Design.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraEditors.v10.2.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v10.2">
-      <HintPath>..\..\Bin\DevExpress.XtraGrid.v10.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraGrid.v10.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v10.2.Design">
-      <HintPath>..\..\Bin\DevExpress.XtraGrid.v10.2.Design.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraGrid.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=f72c54173613ae1f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevExpress.XtraLayout.v10.2.dll</HintPath>
+    <Reference Include="DevExpress.XtraLayout.v10.2">
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraLayout.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2.Design, Version=10.2.8.0, Culture=neutral, PublicKeyToken=f72c54173613ae1f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevExpress.XtraLayout.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraLayout.v10.2.Design">
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraLayout.v10.2.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraNavBar.v10.2">
-      <HintPath>..\..\Bin\DevExpress.XtraNavBar.v10.2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraNavBar.v10.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraNavBar.v10.2.Design">
-      <HintPath>..\..\Bin\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=f72c54173613ae1f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevExpress.XtraTreeList.v10.2.dll</HintPath>
+    <Reference Include="DevExpress.XtraTreeList.v10.2">
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraTreeList.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2.Design, Version=10.2.8.0, Culture=neutral, PublicKeyToken=f72c54173613ae1f, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeList.v10.2.Design">
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraTreeList.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v10.2">
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraWizard.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v10.2.Design">
+      <HintPath>..\..\..\Bin\DevExpress\DevExpress.XtraWizard.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevExpress.XtraTreeList.v10.2.Design.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -233,6 +232,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TreeList\PropertyTreeListTestForm.resx">
       <DependentUpon>PropertyTreeListTestForm.cs</DependentUpon>
@@ -243,6 +243,7 @@
     <EmbeddedResource Include="TreeList\TreeListTestForm.resx">
       <DependentUpon>TreeListTestForm.cs</DependentUpon>
     </EmbeddedResource>
+    <Fakes Include="Fakes\DevExpress.Data.v10.2.fakes" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

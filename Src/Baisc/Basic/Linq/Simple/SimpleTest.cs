@@ -28,5 +28,11 @@ namespace LearnCSharp.Basic.Linq.Simple
             }
 
         }
+
+        public static void ObjectCollectionTest()
+        {
+            
+
+        }
     }
 }

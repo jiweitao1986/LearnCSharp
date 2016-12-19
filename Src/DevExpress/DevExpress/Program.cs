@@ -24,8 +24,7 @@ namespace DevExpress
             //Application.Run(new TestForm());
             //Application.Run(new TreeListTest.RecursiveTreeListTestForm());
 
-            Application.Run(new TreeListTest.PropertyTreeListTestForm());
-
+            Application.Run(new TestForm());
         }
     }
 }
