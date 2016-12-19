@@ -28,47 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.testButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.testButtonEdit.Properties)).BeginInit();
+            this.picEdit = new DevExpress.XtraEditors.PictureEdit();
+            this.picStringEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.showPicEdit = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.picEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStringEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // testButtonEdit
+            // picEdit
             // 
-            this.testButtonEdit.EditValue = "";
-            this.testButtonEdit.Location = new System.Drawing.Point(12, 70);
-            this.testButtonEdit.Name = "testButtonEdit";
-            this.testButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.testButtonEdit.Properties.NullText = "请选择";
-            this.testButtonEdit.Properties.NullValuePrompt = "请选择";
-            this.testButtonEdit.Properties.NullValuePromptShowForEmptyValue = true;
-            this.testButtonEdit.Properties.ReadOnly = true;
-            this.testButtonEdit.Size = new System.Drawing.Size(254, 21);
-            this.testButtonEdit.TabIndex = 0;
-            this.testButtonEdit.ToolTip = "提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容提示内容。";
-            this.testButtonEdit.ToolTipTitle = "提示标题";
-            this.testButtonEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.testButtonEdit_ButtonClick);
+            this.picEdit.Location = new System.Drawing.Point(12, 26);
+            this.picEdit.Name = "picEdit";
+            this.picEdit.Size = new System.Drawing.Size(211, 287);
+            this.picEdit.TabIndex = 0;
+            this.picEdit.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.coverEdit_MouseDoubleClick);
+            // 
+            // picStringEdit
+            // 
+            this.picStringEdit.Location = new System.Drawing.Point(241, 26);
+            this.picStringEdit.Name = "picStringEdit";
+            this.picStringEdit.Size = new System.Drawing.Size(531, 523);
+            this.picStringEdit.TabIndex = 1;
+            // 
+            // showPicEdit
+            // 
+            this.showPicEdit.Location = new System.Drawing.Point(12, 332);
+            this.showPicEdit.Name = "showPicEdit";
+            this.showPicEdit.Size = new System.Drawing.Size(75, 23);
+            this.showPicEdit.TabIndex = 2;
+            this.showPicEdit.Text = "显示图片";
+            this.showPicEdit.Click += new System.EventHandler(this.showPicEdit_Click);
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 401);
-            this.Controls.Add(this.testButtonEdit);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.showPicEdit);
+            this.Controls.Add(this.picStringEdit);
+            this.Controls.Add(this.picEdit);
             this.Name = "TestForm";
-            this.Text = "Form1";
+            this.Text = "测试窗体";
             this.Load += new System.EventHandler(this.TestForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.testButtonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStringEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
+
         #endregion
 
-        private XtraEditors.ButtonEdit testButtonEdit;
-
-
+        private XtraEditors.PictureEdit picEdit;
+        private XtraEditors.MemoEdit picStringEdit;
+        private XtraEditors.SimpleButton showPicEdit;
     }
 }
 
