@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using LearnCSharp.Basic.Entity;
-using LearnCSharp.Basic.Utils;
 
 namespace LearnCSharp.Basic.Linq
 {
+    /// <summary>
+    /// Linq分组测试
+    /// </summary>
     class GroupTest
     {
 

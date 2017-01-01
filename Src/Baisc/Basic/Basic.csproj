@@ -104,7 +104,8 @@
     <Compile Include="IoC\Autofac\User.cs" />
     <Compile Include="Lambda\LambdaTest.cs" />
     <Compile Include="Linq\GroupTest.cs" />
-    <Compile Include="Linq\Simple\SimpleTest.cs" />
+    <Compile Include="Linq\CollectionTest.cs" />
+    <Compile Include="Linq\SimpleTest.cs" />
     <Compile Include="NORTHWNDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
