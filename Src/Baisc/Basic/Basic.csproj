@@ -146,6 +146,7 @@
     <Compile Include="Utils\MockDataUtil.cs" />
     <Compile Include="Utils\OutputUtil.cs" />
     <Compile Include="Xml\XmlTest.cs" />
+    <Compile Include="Xml\XPathTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -166,8 +167,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Xml\XmlFiles\Bookstore.xml" />
-    <Content Include="Xml\XmlFiles\XmlTest.xml" />
+    <Content Include="Xml\Files\Bookstore.xml" />
+    <Content Include="Xml\Files\XmlTest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Other\Attribute\" />

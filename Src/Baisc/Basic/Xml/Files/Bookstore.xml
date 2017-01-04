@@ -3,6 +3,7 @@
     <Book>
         <Title>C#入门经典（第6版）</Title>
         <Price>50</Price>
+      
         <Authors>
             <Author>
                 <Name>沃森(Karli Watson) </Name>
@@ -13,10 +14,21 @@
                 <Country>美国</Country>
             </Author>
         </Authors>
+      
+        <Reference>
+          <Book Price="10">
+            <Title>C#入门参考书1</Title>
+          </Book>
+          <Book Price="20">
+            <Title>C#入门参考书2</Title>
+          </Book>
+        </Reference>
+      
     </Book>
     <Book>
         <Title>C#高级编程（第8版）</Title>
         <Price>50</Price>
+      
         <Authors>
             <Author>
                 <Name>内格尔（Christian Nagel）</Name>
@@ -39,6 +51,16 @@
                 <Country>美国</Country>
             </Author>
         </Authors>
+      
+        <Reference>
+          <Book Price="10">
+            <Title>C#高级参考书1</Title>
+          </Book>
+          <Book Price="20">
+            <Title>C#高级参考书2</Title>
+          </Book>
+        </Reference>
+
     </Book>
 
 </Bookstore>

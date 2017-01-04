@@ -17,21 +17,29 @@ namespace LearnCSharp.Basic
     {
         public static void Run()
         {
+
+            List<string> list = new List<string>
+            {
+                "zhangSan",
+                "LiSi"
+            };
+            Console.WriteLine(list[2]);
+
+
             //查找
-            List<Employee> employees = MockDataUtil.GetEmployees();
-            var queryResult = from e in employees
-                              where e.Gender==Gender.Male
-                              select e;
-            var targetEmployee = queryResult.First();
-            Console.WriteLine(targetEmployee.Name);
+            //List<Employee> employees = MockDataUtil.GetEmployees();
+            //var queryResult = from e in employees
+            //                  where e.Gender==Gender.Male
+            //                  select e;
+            //var targetEmployee = queryResult.First();
+            //Console.WriteLine(targetEmployee.Name);
+
+
+
             //foreach (var item in targetEmployees)
             //{
             //    Console.WriteLine("查找" + item.Name);
             //}
-
-
-
-
 
             //var queryResult = from e in employees
             //                  group e by e.Gender into eg

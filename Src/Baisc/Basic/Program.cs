@@ -28,9 +28,7 @@ namespace LearnCSharp.Basic
             //Other.DateTimeTest.Run();
             //Db.SqlServerTest.Run();
 
-            CaptchaTest.Run();
-
-
+            Xml.XPathTest.Run();
 
             Console.ReadKey();
         }
