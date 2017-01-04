@@ -28,8 +28,6 @@ namespace LearnCSharp.Basic
             //Other.DateTimeTest.Run();
             //Db.SqlServerTest.Run();
 
-            Xml.XPathTest.Run();
-
             Console.ReadKey();
         }
 
