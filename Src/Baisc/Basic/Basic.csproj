@@ -78,6 +78,11 @@
     <Compile Include="Collection\Animals\Chicken.cs" />
     <Compile Include="Collection\Animals\Cow.cs" />
     <Compile Include="Collection\ArrayDemo.cs" />
+    <Compile Include="Collection\Deck\Card.cs" />
+    <Compile Include="Collection\Deck\Deck.cs" />
+    <Compile Include="Collection\Deck\DeckTest.cs" />
+    <Compile Include="Collection\Deck\Rank.cs" />
+    <Compile Include="Collection\Deck\Suit.cs" />
     <Compile Include="Collection\ListTest.cs" />
     <Compile Include="CssParser\BorderParser.cs" />
     <Compile Include="CssParser\ColorParser.cs" />
