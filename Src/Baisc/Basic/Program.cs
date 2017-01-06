@@ -29,11 +29,7 @@ namespace LearnCSharp.Basic
             //Xml.XmlTest.Run();
             //Other.DateTimeTest.Run();
             //Db.SqlServerTest.Run();
-
             //Linq.SimpleTest.Run();
-
-
-
             Console.ReadKey();
         }
 
