@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace LearnCSharp.Basic.Other
 {
+    delegate double ProcessDelegate(double param1, double param2);
+
     class DelegateTest
     {
 
@@ -15,9 +17,9 @@ namespace LearnCSharp.Basic.Other
 
             process = new ProcessDelegate(Multiply);
 
-        }
+            process(1, 2);
 
-        delegate double ProcessDelegate(double param1, double param2);
+        }
 
         public static double Multiply(double param1, double param2)
         {

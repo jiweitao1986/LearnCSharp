@@ -15,7 +15,7 @@ namespace LearnCSharp.Basic
                 "zhangSan",
                 "LiSi"
             };
-            Console.WriteLine(list[2]);
+            Console.WriteLine(list[1]);
 
 
             //查找
