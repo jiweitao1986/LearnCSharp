@@ -33,6 +33,12 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="DevExpress.XtraEditors.v10.2">
+      <HintPath>..\..\..\..\..\..\GSP\GSP6\Dev\Bin\DevExpress.XtraEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.TextEditor">
+      <HintPath>..\..\..\..\..\..\GSP\GSP6\Dev\Bin\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
     <Reference Include="LearningCSharp.CustomControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CustomControl\bin\Debug\LearningCSharp.CustomControl.dll</HintPath>
@@ -63,6 +69,12 @@
       <DependentUpon>ParserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Lib\LogWriter.cs" />
+    <Compile Include="Other\ICSharpCodeTextEditor\SimpleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\ICSharpCodeTextEditor\SimpleTest.Designer.cs">
+      <DependentUpon>SimpleTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\Editors\DataBindingEditor.cs" />
     <Compile Include="Other\PropertyGridTest\PropertyBagTest\PropertyBags\CustomPropertyDescriptor.cs" />
     <Compile Include="Other\PropertyGridTest\CustomTypeDescriptor.cs" />
@@ -122,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Demo\SemanticExpression\ParserForm.resx">
       <DependentUpon>ParserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\ICSharpCodeTextEditor\SimpleTest.resx">
+      <DependentUpon>SimpleTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\PropertyGridTest\PropertyBagTest\PropertyBagTestForm.resx">
       <DependentUpon>PropertyBagTestForm.cs</DependentUpon>

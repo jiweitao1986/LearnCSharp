@@ -89,6 +89,8 @@
     <Compile Include="CssParser\CssParserTest.cs" />
     <Compile Include="CssParser\EnumParser.cs" />
     <Compile Include="CssParser\WidthParser.cs" />
+    <Compile Include="Ds\DataSetChangeTest.cs" />
+    <Compile Include="Ds\DataSetTest.cs" />
     <Compile Include="Entity\Customer.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Db\OracleTest.cs" />
@@ -97,9 +99,12 @@
     <Compile Include="Event\EventDemo.cs" />
     <Compile Include="Event\ConnectEventDemo.cs" />
     <Compile Include="Event\TimerEventDemo.cs" />
-    <Compile Include="File\FileStreamTest.cs" />
-    <Compile Include="File\FileTest.cs" />
+    <Compile Include="Fs\FileStreamTest.cs" />
+    <Compile Include="Fs\FileTest.cs" />
+    <Compile Include="Fs\Stream\StreamTest.cs" />
     <Compile Include="GDI\CaptchaTest.cs" />
+    <Compile Include="GDI\Thumbnail\ThumbnailTest.cs" />
+    <Compile Include="GDI\Thumbnail\ThumbnailUtil.cs" />
     <Compile Include="IoC\Autofac\AutofacTest.cs" />
     <Compile Include="IoC\Autofac\DatabaseManager.cs" />
     <Compile Include="IoC\Autofac\IDatabase.cs" />
@@ -147,7 +152,7 @@
     <Compile Include="Json\JsonTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Other\StringDemo.cs" />
+    <Compile Include="Other\StringTest.cs" />
     <Compile Include="Other\WorkSort.cs" />
     <Compile Include="Utils\MockDataUtil.cs" />
     <Compile Include="Utils\OutputUtil.cs" />
@@ -156,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Ds\DeptEmpChanges.json" />
     <None Include="NORTHWNDDataSet.xsc">
       <DependentUpon>NORTHWNDDataSet.xsd</DependentUpon>
     </None>
@@ -173,10 +179,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fs\Photos\1.jpg" />
+    <Content Include="Fs\Photos\2.jpg" />
+    <Content Include="Fs\Photos\3.jpg" />
+    <Content Include="Fs\Photos\4.jpg" />
+    <Content Include="Fs\Photos\5.jpg" />
+    <Content Include="Fs\Photos\6.jpg" />
+    <Content Include="GDI\Thumbnail\srcPics\long.png" />
+    <Content Include="GDI\Thumbnail\srcPics\wide.png" />
     <Content Include="Xml\Files\Bookstore.xml" />
     <Content Include="Xml\Files\XmlTest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="GDI\Thumbnail\dstPics\" />
     <Folder Include="Other\Attribute\" />
   </ItemGroup>
   <ItemGroup>

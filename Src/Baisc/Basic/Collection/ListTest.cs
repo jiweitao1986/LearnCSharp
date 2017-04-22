@@ -11,15 +11,36 @@ namespace LearnCSharp.Basic.Collection
     {
         public static void Run()
         {
-            List<Employee> emps = new List<Employee>();
-            emps.Add(new Employee { Name = "n1" });
-            emps.Add(new Employee { Name = "n2" });
-            emps.Add(new Employee { Name = "n3" });
-            emps.Add(new Employee { Name = "n4" });
-            emps.Add(new Employee { Name = "n5" });
+            //List<Employee> emps = new List<Employee>();
+            //emps.Add(new Employee { Name = "n1" });
+            //emps.Add(new Employee { Name = "n2" });
+            //emps.Add(new Employee { Name = "n3" });
+            //emps.Add(new Employee { Name = "n4" });
+            //emps.Add(new Employee { Name = "n5" });
 
-            int result = emps.FindIndex(emp=>emp.Name=="n1");
-            Console.WriteLine(result.ToString());
+            //emps.Sort(delegate(Employee x, Employee y)
+            //{
+            //    return 0-x.Name.CompareTo(y.Name);
+
+            //});
+
+            //int result = emps.FindIndex(emp => emp.Name == "n1");
+            //Console.WriteLine(result.ToString());
+
+            
+            string[] test = new string[] {"a", "b", "c"};
+            string[] test2 = new string[] {};
+            Test(test2);
+        }
+
+        public static void Test(string[] strArr)
+        {
+            if (strArr == null)
+            {
+
+            }
+            Console.WriteLine("//////////Test//////////");
+            Console.WriteLine(strArr.Length);
         }
     }
 }
