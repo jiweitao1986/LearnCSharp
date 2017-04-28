@@ -47,12 +47,18 @@ namespace LearnCSharp.Basic
 
             ////////////////////DataSet相关////////////////////
             //Ds.DataSetTest.Run();
-            Ds.DataSetChangeTest.Run();
-
-
+            //Ds.DataSetChangeTest.Run();
+            //DataColumnTest.Run();
+            //Ds.DataRowCollectionTest.Run();
 
             ////////////////////JSON相关////////////////////
             //Json.JsonTest.Run();
+            //Json.NewtonJson.JObjectTest.Run();
+            //Json.NewtonJson.JsonConvertSerializeTest.Run();
+
+
+            ////////////////////Type相关////////////////////
+            Types.ConvertTest.Run();
 
 
             ////////////////////其他测试////////////////////

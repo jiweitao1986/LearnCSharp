@@ -89,8 +89,13 @@
     <Compile Include="CssParser\CssParserTest.cs" />
     <Compile Include="CssParser\EnumParser.cs" />
     <Compile Include="CssParser\WidthParser.cs" />
+    <Compile Include="Ds\DataColumnTest.cs" />
+    <Compile Include="Ds\DataRowCollectionTest.cs" />
+    <Compile Include="Ds\DataRowTest.cs" />
     <Compile Include="Ds\DataSetChangeTest.cs" />
     <Compile Include="Ds\DataSetTest.cs" />
+    <Compile Include="Ds\DataTableTest.cs" />
+    <Compile Include="Ds\DataViewTest.cs" />
     <Compile Include="Entity\Customer.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Db\OracleTest.cs" />
@@ -112,6 +117,9 @@
     <Compile Include="IoC\Autofac\MssDatabase.cs" />
     <Compile Include="IoC\Autofac\OracleDatabase.cs" />
     <Compile Include="IoC\Autofac\User.cs" />
+    <Compile Include="Json\NewtonJson\JObjectTest.cs" />
+    <Compile Include="Json\NewtonJson\JsonConvertDeserializeTest.cs" />
+    <Compile Include="Json\NewtonJson\JsonConvertSerializeTest.cs" />
     <Compile Include="Lambda\LambdaTest.cs" />
     <Compile Include="Linq\GroupTest.cs" />
     <Compile Include="Linq\CollectionTest.cs" />
@@ -144,7 +152,7 @@
     <Compile Include="TmpTest.cs" />
     <Compile Include="Types\EnumTest.cs" />
     <Compile Include="Types\TypeTest.cs" />
-    <Compile Include="Other\ConvertDemo.cs" />
+    <Compile Include="Types\ConvertTest.cs" />
     <Compile Include="Db\DataSetTest.cs" />
     <Compile Include="Other\DateTimeTest.cs" />
     <Compile Include="Db\SqlServerTest.cs" />

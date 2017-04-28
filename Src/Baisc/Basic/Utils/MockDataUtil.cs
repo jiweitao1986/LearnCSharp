@@ -74,7 +74,12 @@ namespace LearnCSharp.Basic
             //部门Table
             DataTable deptDt = new DataTable();
             deptDt.TableName = "Dept";
-            deptDt.Columns.Add(new DataColumn("ID") { Caption = "内码" });
+
+            //部门主键
+            var deptIdColumn = new DataColumn("ID") {Caption = "内码"};
+            deptDt.Columns.Add(deptIdColumn);
+            deptDt.PrimaryKey = new DataColumn[] {deptIdColumn};
+
             deptDt.Columns.Add(new DataColumn("Code") { Caption = "编号" });
             deptDt.Columns.Add(new DataColumn("Name") { Caption = "姓名" });
             deptDt.Columns.Add(new DataColumn("Remark") { Caption = "备注" });
@@ -89,7 +94,12 @@ namespace LearnCSharp.Basic
             //员工Table
             DataTable empDt = new DataTable();
             empDt.TableName = "Emp";
-            empDt.Columns.Add(new DataColumn("ID") { Caption = "内码" });
+
+            //员工主键
+            var empIdColumn = new DataColumn("ID") {Caption = "内码"};
+            empDt.Columns.Add(empIdColumn);
+            empDt.PrimaryKey = new DataColumn[] {empIdColumn};
+
             empDt.Columns.Add(new DataColumn("DeptID") { Caption = "部门内码" });
             empDt.Columns.Add(new DataColumn("Code") { Caption = "编号" });
             empDt.Columns.Add(new DataColumn("Name") { Caption = "姓名" });
@@ -111,8 +121,8 @@ namespace LearnCSharp.Basic
             empDt.Rows.Add(9,  1, "Emp0009", "吴九", 39, new DateTime(1909, 9,  9),  99999.99, '1', "暂无");
             empDt.Rows.Add(10, 2, "Emp0010", "郑十", 40, new DateTime(1910, 10, 10), 10000.00, '0', "暂无");
 
-            empDt.Rows.Add(10, 2, "EmpToUpdate0011", "待更新员工0011", 41, new DateTime(1911, 11, 11), 11000.00, '0', "暂无");
-            empDt.Rows.Add(10, 2, "EmpToDelete0012", "待删除员工0012", 42, new DateTime(1912, 12, 12), 12000.00, '1', "暂无");
+            empDt.Rows.Add(11, 2, "EmpToUpdate0011", "待更新员工0011", 41, new DateTime(1911, 11, 11), 11000.00, '0', "暂无");
+            empDt.Rows.Add(12, 2, "EmpToDelete0012", "待删除员工0012", 42, new DateTime(1912, 12, 12), 12000.00, '1', "暂无");
 
             deptEmpDs.Tables.Add(deptDt);
             deptEmpDs.Tables.Add(empDt);

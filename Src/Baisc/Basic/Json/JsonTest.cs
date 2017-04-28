@@ -18,16 +18,16 @@ namespace LearnCSharp.Basic.Json
         public static void Run()
         {
 
-            string strJson = @"{
-                'ID': 1,
-                'Name': '张三',
-                'Age': 33,
-                'Birthday': '2017-04-22',
-                'IsMarried': true,
-                'Salary': 
-            }";
+            //string strJson = @"{
+            //    'ID': 1,
+            //    'Name': '张三',
+            //    'Age': 33,
+            //    'Birthday': '2017-04-22',
+            //    'IsMarried': true,
+            //    'Salary': 
+            //}";
 
-            Object obj  = JsonConvert.DeserializeObject<Object>(strJson);
+            //Object obj  = JsonConvert.DeserializeObject<Object>(strJson);
 
 
 
