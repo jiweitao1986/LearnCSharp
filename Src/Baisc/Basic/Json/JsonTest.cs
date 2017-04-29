@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,24 @@ namespace LearnCSharp.Basic.Json
     {
         public static void Run()
         {
+
+            //string strJson = @"{
+            //    'ID': 1,
+            //    'Name': '张三',
+            //    'Age': 33,
+            //    'Birthday': '2017-04-22',
+            //    'IsMarried': true,
+            //    'Salary': 
+            //}";
+
+            //Object obj  = JsonConvert.DeserializeObject<Object>(strJson);
+
+
+
+            //string jsonString = "{ \"photoDir\":\"jiwt\",\"userId\":\"a314b7a1-d951-47a4-8c2e-a43b3e2b5442\",\"appInstanceId\":\"001\"}";
+            //var jsonDic = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
+            //Console.WriteLine("解析成功");
+
             //List<Dictionary<string, string>> listBarItemList = new List<Dictionary<string, string>>();
             //Dictionary<string, string> listbarItemDic = new Dictionary<string, string>
             //{
@@ -35,13 +54,44 @@ namespace LearnCSharp.Basic.Json
             ////{
             ////    Console.WriteLine("It is false !");
             ////}
-            Book b = new Book();
+            //Book b = new Book();
+
+
+            DeserializeDataSetTest();
+
 
         }
-        static public void Test(string name = "jiweitao")
+
+        public static void Test(string name = "jiweitao")
         {
             Console.WriteLine(name);
         }
+
+
+        public static void DeserializeDataSetTest()
+        {
+            string dsJson = @"{
+               'Dept': [
+                    {'id': 1, 'Code': 'Dept0001', 'Name': '部门0001'},
+                    {'id': 2, 'Code': 'Dept0002', 'Name': '部门0002'}
+                ],
+               'Emp': [
+                    {'id': 1, 'Code': 'Emp0001', 'Name': '员工0001', 'Age': 31, 'Birthday': '1901-01-01 01:01:01', 'IsMarried': true},
+                    {'id': 2, 'Code': 'Emp0002', 'Name': '员工0001', 'Age': 32, 'Birthday': '1901-02-02 02:02:02', 'IsMarried': false}
+                ]
+            }";
+
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(dsJson);
+            DataTable dt = ds.Tables["Emp"];
+
+            foreach(DataRow row in dt.Rows)
+            {
+                Console.WriteLine(row["Name"]);
+            }
+        }
+
+
+
 
         /// <summary>
         /// 图书实体类

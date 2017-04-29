@@ -19,10 +19,10 @@ namespace LearningCSharp.WinForm
 
             //Application.Run(new StudentList());
             //Application.Run(new Test.Test());
-
-            Application.Run(new TestForm());
             //Application.Run(new Other.PropertyGridTest.SimpleTest.SimpleTestForm());
-            
+
+            Application.Run(new Other.ICSharpCodeTextEditor.SimpleTest());
+
         }
     }
 }

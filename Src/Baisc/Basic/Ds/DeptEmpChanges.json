@@ -1,0 +1,23 @@
+﻿{
+    "Emp": [
+        {
+            "State": "added",
+            "Data": {"ID": 13, "Dept": 1, "Code": "EmpToAdd00013"}
+        },
+        {
+            "State": "deleted",
+            "Data": {"ID": 12}
+        },
+        {
+            "State": "modified",
+            "Data": {"ID": 11, "Remark": "待修改员工的备注！！！"}
+        }
+    ],
+
+    "Dept": [
+      {
+        "State": "modified",
+        "Data": {"ID": 3, "Remark": "待修改部门的备注！！！"}
+      }
+    ]
+}

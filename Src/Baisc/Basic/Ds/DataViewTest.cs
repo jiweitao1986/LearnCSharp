@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp.Basic
+namespace LearnCSharp.Basic.Ds
 {
-    class StringDemo
+    class DataViewTest
     {
     }
 }
