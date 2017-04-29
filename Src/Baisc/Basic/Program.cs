@@ -11,7 +11,7 @@ namespace LearnCSharp.Basic
             OutputUtil.ShowTitle("Tmp Test");
             TmpTest.Run();
 
-            Collection.Deck.DeckTest.Run();
+            //Collection.Deck.DeckTest.Run();
 
             //Collection.ListTest.Run();
             //Types.EnumTest.Run();
@@ -30,6 +30,9 @@ namespace LearnCSharp.Basic
             //Other.DateTimeTest.Run();
             //Db.SqlServerTest.Run();
             //Linq.SimpleTest.Run();
+
+            Collection.IEnumerableTest.Run();
+
             Console.ReadKey();
         }
 

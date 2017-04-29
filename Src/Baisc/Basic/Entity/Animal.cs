@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp.Basic.Collection.Animals
+namespace LearnCSharp.Basic
 {
     public abstract class Animal
     {
@@ -12,7 +12,6 @@ namespace LearnCSharp.Basic.Collection.Animals
 
         public string Name {
             get { return name; }
-
             set { name = value; }
         }
 

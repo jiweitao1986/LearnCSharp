@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LearnCSharp.Basic.Entity;
 
 namespace LearnCSharp.Basic
 {
@@ -10,14 +9,7 @@ namespace LearnCSharp.Basic
         public static void Run()
         {
 
-            List<string> list = new List<string>
-            {
-                "zhangSan",
-                "LiSi"
-            };
-            Console.WriteLine(list[2]);
-
-
+            
             //查找
             //List<Employee> employees = MockDataUtil.GetEmployees();
             //var queryResult = from e in employees

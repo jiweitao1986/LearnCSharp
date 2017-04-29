@@ -1,9 +1,11 @@
 ﻿using System;
 
-namespace LearnCSharp.Basic.Entity
+namespace LearnCSharp.Basic
 {
     public class Employee
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
 
         public Gender Gender { get; set; }
