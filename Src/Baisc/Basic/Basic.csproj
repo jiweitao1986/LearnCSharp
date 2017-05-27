@@ -74,15 +74,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collection\Animals\Animal.cs" />
-    <Compile Include="Collection\Animals\Chicken.cs" />
-    <Compile Include="Collection\Animals\Cow.cs" />
+    <Compile Include="Collection\Compare\Person.cs" />
+    <Compile Include="Collection\Compare\PersonComparerName.cs" />
+    <Compile Include="Entity\Animal.cs" />
+    <Compile Include="Entity\Chicken.cs" />
+    <Compile Include="Entity\Cow.cs" />
     <Compile Include="Collection\ArrayDemo.cs" />
     <Compile Include="Collection\Deck\Card.cs" />
     <Compile Include="Collection\Deck\Deck.cs" />
     <Compile Include="Collection\Deck\DeckTest.cs" />
     <Compile Include="Collection\Deck\Rank.cs" />
     <Compile Include="Collection\Deck\Suit.cs" />
+    <Compile Include="Collection\IEnumerableTest.cs" />
     <Compile Include="Collection\ListTest.cs" />
     <Compile Include="CssParser\BorderParser.cs" />
     <Compile Include="CssParser\ColorParser.cs" />

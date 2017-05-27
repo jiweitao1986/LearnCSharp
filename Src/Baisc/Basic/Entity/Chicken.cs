@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp.Basic.Collection.Animals
+namespace LearnCSharp.Basic
 {
     class Chicken : Animal
     {
-        public Chicken(string newName)
+        public Chicken(string newName) : base(newName)
         {
             name = newName;
         }

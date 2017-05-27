@@ -67,6 +67,8 @@ namespace LearnCSharp.Basic
             //Other.ExceptionHandle.ExceptionTest.Run();
             //Linq.Simple.SimpleTest.Run();
             //Other.DateTimeTest.Run();
+            //Db.SqlServerTest.Run();
+            //Linq.SimpleTest.Run();
             //Other.StringTest.Run();
             //Generics.Result.ResultTest.Run();
 

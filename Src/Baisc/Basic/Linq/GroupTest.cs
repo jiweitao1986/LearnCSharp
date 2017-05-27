@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LearnCSharp.Basic.Entity;
 
 namespace LearnCSharp.Basic.Linq
 {

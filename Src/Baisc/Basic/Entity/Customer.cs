@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp.Basic.Entity
+namespace LearnCSharp.Basic
 {
     class Customer
     {
