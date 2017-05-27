@@ -58,7 +58,7 @@ namespace LearnCSharp.Basic
 
 
             ////////////////////Type相关////////////////////
-            Types.ConvertTest.Run();
+            //Types.ConvertTest.Run();
 
 
             ////////////////////其他测试////////////////////
@@ -68,9 +68,9 @@ namespace LearnCSharp.Basic
             //Linq.Simple.SimpleTest.Run();
             //Other.DateTimeTest.Run();
             //Other.StringTest.Run();
+            //Generics.Result.ResultTest.Run();
 
-
-
+            Fs.FileTest.Run();
 
             Console.ReadKey();
         }

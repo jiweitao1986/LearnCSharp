@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic", "..\Src\Baisc\Basic\Basic.csproj", "{4B872279-8A8E-4DEC-BB43-0477E971C158}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pattern", "..\Src\Pattern\Pattern\Pattern.csproj", "{EF46F871-1481-4AAD-8524-258C11F19061}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP", "ASP", "{45E35328-FF22-4D19-8823-252B2A286024}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{CF1F13BC-F7BC-4003-838C-2DC395912E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "..\Src\EntityFramework\EntityFramework\EntityFramework.csproj", "{B7E2E41C-2475-4BA5-AFE0-206F01D7AA85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{EF46F871-1481-4AAD-8524-258C11F19061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF46F871-1481-4AAD-8524-258C11F19061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF46F871-1481-4AAD-8524-258C11F19061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E2E41C-2475-4BA5-AFE0-206F01D7AA85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E2E41C-2475-4BA5-AFE0-206F01D7AA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E2E41C-2475-4BA5-AFE0-206F01D7AA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E2E41C-2475-4BA5-AFE0-206F01D7AA85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,5 +74,6 @@ Global
 		{E79B82ED-194A-4144-8587-1B5C96C4F9CB} = {09839A83-8555-43FB-927E-F14B130C9358}
 		{E54AFF6B-7E32-47EB-8257-1BF4E5ED6F97} = {5E1EEAA3-F706-48A6-B4A9-676B66BF5E9E}
 		{EF46F871-1481-4AAD-8524-258C11F19061} = {58AF3F6C-FF0B-41A9-83BC-9ADCDA2C5DA6}
+		{B7E2E41C-2475-4BA5-AFE0-206F01D7AA85} = {CF1F13BC-F7BC-4003-838C-2DC395912E24}
 	EndGlobalSection
 EndGlobal

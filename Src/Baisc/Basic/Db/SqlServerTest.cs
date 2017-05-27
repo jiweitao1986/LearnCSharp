@@ -14,7 +14,7 @@ namespace LearnCSharp.Basic.Db
         /// </summary>
         public static void Run()
         {
-            //ConnectTest();
+            ConnectTest();
             //RetrieveTest();
             //DeleteTest();
             //CreateTest();
@@ -193,8 +193,9 @@ namespace LearnCSharp.Basic.Db
             //使用
             //connectString = "Data Source=127.0.0.1;Initial Catalog=NORTHWND;Integrated Security=False;UID=sa;PWD=123456a?";
 
-            connectString = "Server=127.0.0.1;Database=NORTHWND;UID=sa;PWD=123456a?";
+            //connectString = "Server=127.0.0.1;Database=NORTHWND;UID=sa;PWD=123456a?";
 
+            connectString = "Data Source=10.24.13.112;Initial Catalog=TemplateMarket;Integrated Security=False;UID=sa;PWD=aaaaaa";
             SqlConnection connect = new SqlConnection();
             connect.ConnectionString = connectString;
             return connect;

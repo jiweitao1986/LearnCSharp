@@ -110,6 +110,8 @@
     <Compile Include="GDI\CaptchaTest.cs" />
     <Compile Include="GDI\Thumbnail\ThumbnailTest.cs" />
     <Compile Include="GDI\Thumbnail\ThumbnailUtil.cs" />
+    <Compile Include="Generics\Result\Result.cs" />
+    <Compile Include="Generics\Result\ResultTest.cs" />
     <Compile Include="IoC\Autofac\AutofacTest.cs" />
     <Compile Include="IoC\Autofac\DatabaseManager.cs" />
     <Compile Include="IoC\Autofac\IDatabase.cs" />

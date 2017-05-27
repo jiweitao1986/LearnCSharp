@@ -10,11 +10,10 @@ namespace LearnCSharp.Basic
     {
         public static void Run()
         {
-            var path = "RefCSSes/Group[@IsDebug=\"{0}\" and @Theme=\"{1}\"]/RefCss";
-            path = path.Replace("{0}", "true");
-            path = path.Replace("{1}", "classic");
-
-            Console.WriteLine(Convert.ToBoolean(null));
+            //var path = "RefCSSes/Group[@IsDebug=\"{0}\" and @Theme=\"{1}\"]/RefCss";
+            //path = path.Replace("{0}", "true");
+            //path = path.Replace("{1}", "classic");
+            //Console.WriteLine(Convert.ToBoolean(null));
 
             //查找
             //List<Employee> employees = MockDataUtil.GetEmployees();
@@ -55,6 +54,8 @@ namespace LearnCSharp.Basic
             //{
             //    Console.WriteLine(item.Key + item.Value.Employees.Count);
             //}
+
+
         }
     }
 

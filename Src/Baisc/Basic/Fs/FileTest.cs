@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp.Basic
+namespace LearnCSharp.Basic.Fs
 {
     class FileTest
     {
@@ -23,9 +23,134 @@ namespace LearnCSharp.Basic
             //Console.WriteLine(p1.GetType());
             //ReadAllTextTest
 
-            PathTest();
+            //PathTest();
+
+            PushQdMessage();
+            PushHkMessage();
+        }
+
+
+
+        public static void PushQdMessage()
+        {
+            //解析签单日期
+            Console.WriteLine("上次签单日期");
+
+            string lastQdPushDateFile = @"../../Xml/LastQdPushDate.txt";
+            if (File.Exists(lastQdPushDateFile) == false)
+            {
+                File.WriteAllText(lastQdPushDateFile, DateTime.Now.ToString("yyyy-M-d"));
+                return;
+            }
+
+            string lastQdPushDate = File.ReadAllText(lastQdPushDateFile);
+            string[] lastQdPushDateParts = lastQdPushDate.Split('-');
+
+            //var startYear = lastQdPushDateParts[0];
+            //var startMonth = lastQdPushDateParts[1];
+            //var startDay = lastQdPushDateParts[2];
+
+            var startYear = 2017;
+            var startMonth = 4;
+            var startDay = 1;
+
+            var endDate = DateTime.Now;
+            var endYear = endDate.Year;
+            var endMonth = endDate.Month;
+            var endDay = endDate.Day;
+
+            var sql = "select COUNT(QDCODE) from MODEL_QD_QDBB_DAY";
+            sql += " where";
+            sql += " (";
+            sql +=     " QDNF > " + startYear;
+            sql +=     " OR (QDNF = " + startYear + " AND QDYF > " + startMonth + ")";
+            sql +=     " OR (QDNF = " + startYear + " AND QDYF = " + startMonth + " AND QDRQ >= " + startDay + ")";
+            sql += " )";
+            sql += " and (";
+            sql += " QDNF < " + endYear;
+            sql += " OR (QDNF = " + endYear + " AND QDYF < " + endMonth + ")";
+            sql += " OR (QDNF = " + endYear + " AND QDYF = " + endMonth + " AND QDRQ <= " + endDay + ")";
+            sql += " )";
+
+            Console.WriteLine(sql);
+
+            //获取签单数量
+            int qdCount = 0;
+            if (qdCount > 0)
+            {
+                //推送签单消息
+
+                //更新日期
+                File.WriteAllText(lastQdPushDateFile, DateTime.Now.ToString("yyyy-M-d"));
+            }
+        }
+
+
+        public static void PushHkMessage()
+        {
+            Console.WriteLine("上次回款日期");
+
+            string lastHkPushDateFile = @"../../Xml/LastHkPushDate.txt";
+            if (File.Exists(lastHkPushDateFile) == false)
+            {
+                File.WriteAllText(lastHkPushDateFile, DateTime.Now.ToString("yyyy-M-d"));
+            }
+
+            //解析回款日期
+            var lastHkPushDate = File.ReadAllText(lastHkPushDateFile);
+            var lastHkPushDateParts = lastHkPushDate.Split('-');
+
+            //var startYear = lastHkPushDateParts[0];
+            //var startMonth = lastHkPushDateParts[1];
+            //var startDay = lastHkPushDateParts[2];
+
+            var startYear = 2017;
+            var startMonth = 4;
+            var startDay = 1;
+
+            var endDate = DateTime.Now;
+            var endYear = endDate.Year;
+            var endMonth = endDate.Month;
+            var endDay = endDate.Day;
+
+            var sql  = "select COUNT(HKCODE) from MODEL_HK_HKBB_DAY";
+                sql += " where";
+                sql += " (";
+                sql += " HKNF > " + startYear;
+                sql += " OR (HKNF = " + startYear + " AND HKYF > " + startMonth + ")";
+                sql += " OR (HKNF = " + startYear + " AND HKYF = " + startMonth + " AND HKRQ >= " + startDay + ")";
+                sql += " )";
+                sql += " and (";
+                sql += " HKNF < " + endYear;
+                sql += " OR (HKNF = " + endYear + " AND HKYF < " + endMonth + ")";
+                sql += " OR (HKNF = " + endYear + " AND HKYF = " + endMonth + " AND HKRQ <= " + endDay + ")";
+                sql += " )";
+
+            Console.WriteLine(sql);
+
+
+            int hkCount = 0;
+            if (hkCount > 0)
+            {
+                //推送回款消息
+
+
+                //更新日期
+                File.WriteAllText(lastHkPushDateFile, DateTime.Now.ToString("yyyy-M-d"));
+            }
 
         }
+
+
+
+
+
+
+
+
+
+
+
 
         public static void ReadAllTextTest()
         {

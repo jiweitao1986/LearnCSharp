@@ -31,8 +31,10 @@ namespace LearnCSharp.Basic.Types
     {
         public static void Run()
         {
+            var t = (ThreeDay)2;
+
             //GetNamesTest();
-            GetValuesTest();
+            //GetValuesTest();
             //ParseTest();
             //ToObjectTest();
             //GetDescriptionsTest();
@@ -94,6 +96,8 @@ namespace LearnCSharp.Basic.Types
             {
                 Console.WriteLine("Parse String \"Today\" to \"ThreeDay.Today\" .");
             }
+
+            
             Console.WriteLine("");
         }
 
