@@ -71,8 +71,18 @@ namespace LearnCSharp.Basic
             //Linq.SimpleTest.Run();
             //Other.StringTest.Run();
             //Generics.Result.ResultTest.Run();
+            // Fs.FileTest.Run();
+            //Other.DateTimeTest.TryParseTest();
 
-            Fs.FileTest.Run();
+            //HrTest.HrIndexTest.Run();
+            //HrTest.HrBmTest.Run();
+            //HrTest.HrGwTest.Run();
+            //HrTest.HrLzTest.Run();
+
+            float f = 0.1F;
+            Console.WriteLine(f.ToString("F2"));
+
+
 
             Console.ReadKey();
         }

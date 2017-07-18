@@ -10,9 +10,27 @@ namespace LearnCSharp.Basic.Other
         /// </summary>
         public static void Run()
         {
-            FormatTest();
+
             ConstructorTest();
+            TryParseTest();
+            FormatTest();
+
         }
+
+
+        public static void TryParseTest()
+        {
+            var first = DateTime.Parse("2017-6-3");
+            Console.WriteLine(first.ToString("yyyy-MM-dd"));
+
+
+            var second = DateTime.Parse("2017-06-23");
+            Console.WriteLine(second.ToString("yyyy-MM-dd"));
+
+            var third = DateTime.Parse("2017/06/23");
+            Console.WriteLine(third.ToString("yyyy-MM-dd"));
+        }
+
 
         /// <summary>
         /// 日期格式化测试
